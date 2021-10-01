@@ -3,29 +3,68 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8413F0FF26E93D74003EEC04 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F0FE26E93D74003EEC04 /* CreateAccountVC.swift */; };
+		8413F10826EA753C003EEC04 /* FoodDiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */; };
+		8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */; };
+		8413F10C26EA760C003EEC04 /* AddFoodTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */; };
+		8413F11026EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10F26EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift */; };
+		8413F11226EA7B12003EEC04 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11126EA7B12003EEC04 /* SettingsTVC.swift */; };
+		8413F11426EA883C003EEC04 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11326EA883C003EEC04 /* Meals.swift */; };
+		8413F11626EA8A17003EEC04 /* Diets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11526EA8A17003EEC04 /* Diets.swift */; };
+		8413F11D26F3AD8B003EEC04 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11C26F3AD8B003EEC04 /* VerificationService.swift */; };
+		844BE63A26E8791B00C1E5A3 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */; };
+		84C5471B27020D53000CE65D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5471A27020D53000CE65D /* MainVC.swift */; };
+		84C5471E2702239A000CE65D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 84C5471D2702239A000CE65D /* FirebaseAnalytics */; };
+		84C547202702239A000CE65D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84C5471F2702239A000CE65D /* FirebaseAuth */; };
+		84C547222702239A000CE65D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 84C547212702239A000CE65D /* FirebaseDatabase */; };
+		84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */; };
+		84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C547282705465F000CE65D /* GoogleService-Info.plist */; };
+		84C5472B2705E335000CE65D /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5472A2705E334000CE65D /* CircleProgressView.swift */; };
+		84C5472D2705FA70000CE65D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5472C2705FA70000CE65D /* User.swift */; };
+		84C5473227062E51000CE65D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5473127062E51000CE65D /* MealTableViewCell.swift */; };
+		84C5473527063C4E000CE65D /* MealsDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */; };
+		84C5473727063CF8000CE65D /* MealsDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5473627063CF8000CE65D /* MealsDetailTVC.swift */; };
 		84F0E0FA26E59CC8002E9FA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E0F926E59CC8002E9FA2 /* AppDelegate.swift */; };
 		84F0E0FC26E59CC8002E9FA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E0FB26E59CC8002E9FA2 /* SceneDelegate.swift */; };
-		84F0E0FE26E59CC8002E9FA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E0FD26E59CC8002E9FA2 /* ViewController.swift */; };
 		84F0E10126E59CC8002E9FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E0FF26E59CC8002E9FA2 /* Main.storyboard */; };
 		84F0E10426E59CC8002E9FA2 /* FoodExpert.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */; };
 		84F0E10626E59CCF002E9FA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10526E59CCF002E9FA2 /* Assets.xcassets */; };
 		84F0E10926E59CCF002E9FA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10726E59CCF002E9FA2 /* LaunchScreen.storyboard */; };
+		84F0E12226E873FE002E9FA2 /* DiaryMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8413F0FE26E93D74003EEC04 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryVC.swift; sourceTree = "<group>"; };
+		8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCollectionVC.swift; sourceTree = "<group>"; };
+		8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodTVC.swift; sourceTree = "<group>"; };
+		8413F10F26EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccInfoAndSettingsVC.swift; sourceTree = "<group>"; };
+		8413F11126EA7B12003EEC04 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		8413F11326EA883C003EEC04 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		8413F11526EA8A17003EEC04 /* Diets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diets.swift; sourceTree = "<group>"; };
+		8413F11C26F3AD8B003EEC04 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
+		844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		84C5471A27020D53000CE65D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		84C547282705465F000CE65D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84C5472A2705E334000CE65D /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		84C5472C2705FA70000CE65D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84C5473127062E51000CE65D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealsDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		84C5473627063CF8000CE65D /* MealsDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsDetailTVC.swift; sourceTree = "<group>"; };
 		84F0E0F626E59CC8002E9FA2 /* FoodExpert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExpert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F0E0F926E59CC8002E9FA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F0E0FB26E59CC8002E9FA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84F0E0FD26E59CC8002E9FA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84F0E10026E59CC8002E9FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F0E10326E59CC8002E9FA2 /* FoodExpert.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodExpert.xcdatamodel; sourceTree = "<group>"; };
 		84F0E10526E59CCF002E9FA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F0E10826E59CCF002E9FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84F0E10A26E59CCF002E9FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryMainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +72,89 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C547222702239A000CE65D /* FirebaseDatabase in Frameworks */,
+				84C5471E2702239A000CE65D /* FirebaseAnalytics in Frameworks */,
+				84C547202702239A000CE65D /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8413F10426EA7493003EEC04 /* DiaryControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */,
+				84C5472A2705E334000CE65D /* CircleProgressView.swift */,
+				84C5473127062E51000CE65D /* MealTableViewCell.swift */,
+				84C5473627063CF8000CE65D /* MealsDetailTVC.swift */,
+			);
+			path = DiaryControllers;
+			sourceTree = "<group>";
+		};
+		8413F10526EA74F5003EEC04 /* RecepesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */,
+			);
+			path = RecepesControllers;
+			sourceTree = "<group>";
+		};
+		8413F10626EA7506003EEC04 /* AddFoodControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */,
+			);
+			path = AddFoodControllers;
+			sourceTree = "<group>";
+		};
+		8413F10D26EA77B9003EEC04 /* AccountControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10F26EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift */,
+			);
+			path = AccountControllers;
+			sourceTree = "<group>";
+		};
+		8413F10E26EA77D2003EEC04 /* SettingsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F11126EA7B12003EEC04 /* SettingsTVC.swift */,
+			);
+			path = SettingsControllers;
+			sourceTree = "<group>";
+		};
+		8413F11726F3AC50003EEC04 /* VerificationService */ = {
+			isa = PBXGroup;
+			children = (
+				8413F11C26F3AD8B003EEC04 /* VerificationService.swift */,
+			);
+			path = VerificationService;
+			sourceTree = "<group>";
+		};
+		84C5471927020D22000CE65D /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				84C5471A27020D53000CE65D /* MainVC.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		84C547252704DA2F000CE65D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		84C5472E27060509000CE65D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		84F0E0ED26E59CC7002E9FA2 = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +174,15 @@
 		84F0E0F826E59CC8002E9FA2 /* FoodExpert */ = {
 			isa = PBXGroup;
 			children = (
+				84C5472E27060509000CE65D /* Constants */,
+				84C547252704DA2F000CE65D /* Managers */,
 				84F0E11526E59D3D002E9FA2 /* Services */,
 				84F0E11426E59D2E002E9FA2 /* Models */,
 				84F0E11026E59CEB002E9FA2 /* Views */,
 				84F0E11226E59D12002E9FA2 /* Controllers */,
-				84F0E11126E59D05002E9FA2 /* Delegate */,
+				84F0E11126E59D05002E9FA2 /* AppDelegate */,
 				84F0E11326E59D23002E9FA2 /* Sources */,
+				84C547282705465F000CE65D /* GoogleService-Info.plist */,
 				84F0E10A26E59CCF002E9FA2 /* Info.plist */,
 				84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */,
 			);
@@ -73,25 +192,34 @@
 		84F0E11026E59CEB002E9FA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */,
+				84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */,
+				844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */,
 				84F0E0FF26E59CC8002E9FA2 /* Main.storyboard */,
 				84F0E10726E59CCF002E9FA2 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		84F0E11126E59D05002E9FA2 /* Delegate */ = {
+		84F0E11126E59D05002E9FA2 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				84F0E0F926E59CC8002E9FA2 /* AppDelegate.swift */,
 				84F0E0FB26E59CC8002E9FA2 /* SceneDelegate.swift */,
 			);
-			path = Delegate;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		84F0E11226E59D12002E9FA2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				84F0E0FD26E59CC8002E9FA2 /* ViewController.swift */,
+				8413F10E26EA77D2003EEC04 /* SettingsControllers */,
+				8413F10D26EA77B9003EEC04 /* AccountControllers */,
+				8413F10626EA7506003EEC04 /* AddFoodControllers */,
+				8413F10526EA74F5003EEC04 /* RecepesControllers */,
+				8413F10426EA7493003EEC04 /* DiaryControllers */,
+				84F0E11C26E86027002E9FA2 /* SignUpControllers */,
+				84C5471927020D22000CE65D /* MainVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +235,9 @@
 		84F0E11426E59D2E002E9FA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8413F11326EA883C003EEC04 /* Meals.swift */,
+				8413F11526EA8A17003EEC04 /* Diets.swift */,
+				84C5472C2705FA70000CE65D /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,6 +245,7 @@
 		84F0E11526E59D3D002E9FA2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8413F11726F3AC50003EEC04 /* VerificationService */,
 				84F0E11626E59D5F002E9FA2 /* APIService */,
 			);
 			path = Services;
@@ -124,6 +256,14 @@
 			children = (
 			);
 			path = APIService;
+			sourceTree = "<group>";
+		};
+		84F0E11C26E86027002E9FA2 /* SignUpControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F0FE26E93D74003EEC04 /* CreateAccountVC.swift */,
+			);
+			path = SignUpControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +282,11 @@
 			dependencies = (
 			);
 			name = FoodExpert;
+			packageProductDependencies = (
+				84C5471D2702239A000CE65D /* FirebaseAnalytics */,
+				84C5471F2702239A000CE65D /* FirebaseAuth */,
+				84C547212702239A000CE65D /* FirebaseDatabase */,
+			);
 			productName = FoodExpert;
 			productReference = 84F0E0F626E59CC8002E9FA2 /* FoodExpert.app */;
 			productType = "com.apple.product-type.application";
@@ -169,6 +314,9 @@
 				Base,
 			);
 			mainGroup = 84F0E0ED26E59CC7002E9FA2;
+			packageReferences = (
+				84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 84F0E0F726E59CC8002E9FA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,9 +331,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844BE63A26E8791B00C1E5A3 /* SignUpStoryboard.storyboard in Resources */,
+				84C5473527063C4E000CE65D /* MealsDetailStoryboard.storyboard in Resources */,
 				84F0E10926E59CCF002E9FA2 /* LaunchScreen.storyboard in Resources */,
+				84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */,
 				84F0E10626E59CCF002E9FA2 /* Assets.xcassets in Resources */,
 				84F0E10126E59CC8002E9FA2 /* Main.storyboard in Resources */,
+				84F0E12226E873FE002E9FA2 /* DiaryMainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,10 +348,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F0E0FE26E59CC8002E9FA2 /* ViewController.swift in Sources */,
+				84C5471B27020D53000CE65D /* MainVC.swift in Sources */,
+				84C5473727063CF8000CE65D /* MealsDetailTVC.swift in Sources */,
+				84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */,
+				8413F10826EA753C003EEC04 /* FoodDiaryVC.swift in Sources */,
 				84F0E0FA26E59CC8002E9FA2 /* AppDelegate.swift in Sources */,
+				84C5472B2705E335000CE65D /* CircleProgressView.swift in Sources */,
+				8413F0FF26E93D74003EEC04 /* CreateAccountVC.swift in Sources */,
+				84C5472D2705FA70000CE65D /* User.swift in Sources */,
+				8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */,
 				84F0E0FC26E59CC8002E9FA2 /* SceneDelegate.swift in Sources */,
+				84C5473227062E51000CE65D /* MealTableViewCell.swift in Sources */,
+				8413F11D26F3AD8B003EEC04 /* VerificationService.swift in Sources */,
+				8413F11226EA7B12003EEC04 /* SettingsTVC.swift in Sources */,
+				8413F11626EA8A17003EEC04 /* Diets.swift in Sources */,
+				8413F10C26EA760C003EEC04 /* AddFoodTVC.swift in Sources */,
+				8413F11026EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift in Sources */,
 				84F0E10426E59CC8002E9FA2 /* FoodExpert.xcdatamodeld in Sources */,
+				8413F11426EA883C003EEC04 /* Meals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Yana-Golodyuk.FoodExpert";
+				PRODUCT_BUNDLE_IDENTIFIER = com.golodyuk.goodexpert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Yana-Golodyuk.FoodExpert";
+				PRODUCT_BUNDLE_IDENTIFIER = com.golodyuk.goodexpert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,6 +567,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84C5471D2702239A000CE65D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		84C5471F2702239A000CE65D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		84C547212702239A000CE65D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */ = {
