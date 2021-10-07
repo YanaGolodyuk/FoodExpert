@@ -12,18 +12,19 @@ class RecipesCollectionVC: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var recieps: [Recipe] = []
+    var recipes: [Recipe] = []
     
-    var selectedSegmentIndex: Int = 0
+    var selectedMealType: Meals = .breakfast
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.searchTextField.textColor = UIColor.white
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         getReceipt()
     }
 
     @IBAction func segmentedValueChanged(_ sender: UISegmentedControl) {
-        selectedSegmentIndex = sender.selectedSegmentIndex
+        selectedMealType = Meals(index: sender.selectedSegmentIndex)
         let q = searchBar.searchTextField.text ?? ""
         getReceipt(q: q)
     }
@@ -35,28 +36,26 @@ class RecipesCollectionVC: UIViewController, UICollectionViewDataSource, UIColle
 
 
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return recieps.count
+        return recipes.count
     }
 
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReciepeImageCell", for: indexPath) as? ReciepeImageCell {
-            cell.configure(receip: recieps[indexPath.row])
+            if recipes.count > indexPath.row {
+                cell.configure(recipe: recipes[indexPath.row])
+            }
             return cell
         }
-    
-        // Configure the cell
     
         return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        let receipt = recieps[indexPath.row]
-        
-        let vc = UIStoryboard(name: <#T##String#>, bundle: <#T##Bundle?#>)
-        //TODO: - тут переход на следуюзий экран пишешь. внутрь следующего экрана положи receipt, и из него на следующем экране доставай всю нужную тебе инфук
+        if let vc = UIStoryboard(name: "RecipeDetailStoryboard", bundle: nil).instantiateInitialViewController() as? RecipeDetailVC {
+            vc.recipes = recipes[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        //TODO: - тут переход на следуюзий экран пишешь. внутрь следующего экрана положи recipe, и из него на следующем экране доставай всю нужную тебе инфук
     }
 }
 
@@ -80,27 +79,14 @@ extension RecipesCollectionVC: UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        getReceipt(q: searchText)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.getReceipt(q: searchText)
+        }
     }
     
     func getReceipt(q: String = "") {
-        
-        var mealType = "Breakfast"
-        
-        switch selectedSegmentIndex {
-        case 0:
-            mealType = "Breakfast"
-        case 1:
-            mealType = "Lunch"
-        default:
-            mealType = "Dinner"
-        }
-        
-        ServerManager.shared.getRceipts(q: q, mealType: mealType, completion: { recieps in
-            
-            self.recieps = recieps
-            
+        ServerManager.shared.getRceipts(q: q, mealType: selectedMealType.rawValue, completion: { recieps in
+            self.recipes = recieps
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }

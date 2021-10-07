@@ -2,6 +2,7 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passTF: UITextField!
     @IBOutlet weak var userErrorLbl: UILabel!
@@ -32,15 +33,17 @@ class MainVC: UIViewController {
     }
     
     private func checkUser(_ email: String, _ password: String) {
+        activityIndicatorView.startAnimating()
         FirebaseAuthManager().signIn(with: email, password: password) { [weak self] success in
             guard let self = self else { return }
+            self.activityIndicatorView.stopAnimating()
             switch success {
             case true :
                 if let foodDiaryVC = UIStoryboard(name: "DiaryMainStoryboard", bundle: .main).instantiateInitialViewController() {
-                    self.navigationController?.show(foodDiaryVC, sender: nil)
+                    foodDiaryVC.modalPresentationStyle = .fullScreen
+                    self.present(foodDiaryVC, animated: false, completion: nil)
                 }
-//                foodDiaryVC.genaPidor = true
-//                foodDiaryVC.pidory = ["Zakhar", "Hena", "Alex"]
+
             case false:
                 let alertController = UIAlertController(title: "Error!", message: "No acount we're found", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))

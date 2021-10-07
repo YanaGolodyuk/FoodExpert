@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15FED59F31BAD4BB2D43A8D5 /* Pods_FoodExpert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4914C2569606941FB042E219 /* Pods_FoodExpert.framework */; };
 		8413F0FF26E93D74003EEC04 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F0FE26E93D74003EEC04 /* CreateAccountVC.swift */; };
 		8413F10826EA753C003EEC04 /* FoodDiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */; };
 		8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */; };
@@ -15,12 +16,16 @@
 		8413F11226EA7B12003EEC04 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11126EA7B12003EEC04 /* SettingsTVC.swift */; };
 		8413F11426EA883C003EEC04 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11326EA883C003EEC04 /* Meals.swift */; };
 		8413F11626EA8A17003EEC04 /* Diets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11526EA8A17003EEC04 /* Diets.swift */; };
-		8413F11D26F3AD8B003EEC04 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11C26F3AD8B003EEC04 /* VerificationService.swift */; };
 		844BE63A26E8791B00C1E5A3 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */; };
+		84907172270C8A59001E9280 /* FoodTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907171270C8A59001E9280 /* FoodTVCell.swift */; };
+		84907176270C8CF5001E9280 /* AddedFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907175270C8CF5001E9280 /* AddedFood.swift */; };
+		849E8E00270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */; };
+		849E8E03270DC89500A8BB58 /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E02270DC89500A8BB58 /* RecipeDetailVC.swift */; };
+		849E8E08270E3E4200A8BB58 /* FoodSearchDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */; };
+		849E8E0A270E3E9500A8BB58 /* FoodSearchDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E09270E3E9500A8BB58 /* FoodSearchDetailVC.swift */; };
+		849E8E10270E4F0B00A8BB58 /* AddFoodTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E0F270E4F0B00A8BB58 /* AddFoodTVCell.swift */; };
+		84B82DF2270CB78500BAB5CF /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B82DF1270CB78500BAB5CF /* ServerManager.swift */; };
 		84C5471B27020D53000CE65D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5471A27020D53000CE65D /* MainVC.swift */; };
-		84C5471E2702239A000CE65D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 84C5471D2702239A000CE65D /* FirebaseAnalytics */; };
-		84C547202702239A000CE65D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84C5471F2702239A000CE65D /* FirebaseAuth */; };
-		84C547222702239A000CE65D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 84C547212702239A000CE65D /* FirebaseDatabase */; };
 		84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */; };
 		84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C547282705465F000CE65D /* GoogleService-Info.plist */; };
 		84C5472B2705E335000CE65D /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5472A2705E334000CE65D /* CircleProgressView.swift */; };
@@ -35,9 +40,13 @@
 		84F0E10626E59CCF002E9FA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10526E59CCF002E9FA2 /* Assets.xcassets */; };
 		84F0E10926E59CCF002E9FA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10726E59CCF002E9FA2 /* LaunchScreen.storyboard */; };
 		84F0E12226E873FE002E9FA2 /* DiaryMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */; };
+		FA47F5A4270CD32400EED2E7 /* SearchBarCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47F5A3270CD32400EED2E7 /* SearchBarCollectionReusableView.swift */; };
+		FA47F5A6270CDA2000EED2E7 /* ReciepeImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47F5A5270CDA2000EED2E7 /* ReciepeImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BCB6725A3B3764AE81BA7F2 /* Pods-FoodExpert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodExpert.debug.xcconfig"; path = "Target Support Files/Pods-FoodExpert/Pods-FoodExpert.debug.xcconfig"; sourceTree = "<group>"; };
+		4914C2569606941FB042E219 /* Pods_FoodExpert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodExpert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8413F0FE26E93D74003EEC04 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryVC.swift; sourceTree = "<group>"; };
 		8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCollectionVC.swift; sourceTree = "<group>"; };
@@ -46,8 +55,15 @@
 		8413F11126EA7B12003EEC04 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		8413F11326EA883C003EEC04 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		8413F11526EA8A17003EEC04 /* Diets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diets.swift; sourceTree = "<group>"; };
-		8413F11C26F3AD8B003EEC04 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		84907171270C8A59001E9280 /* FoodTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTVCell.swift; sourceTree = "<group>"; };
+		84907175270C8CF5001E9280 /* AddedFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedFood.swift; sourceTree = "<group>"; };
+		849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		849E8E02270DC89500A8BB58 /* RecipeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
+		849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodSearchDetail.storyboard; sourceTree = "<group>"; };
+		849E8E09270E3E9500A8BB58 /* FoodSearchDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchDetailVC.swift; sourceTree = "<group>"; };
+		849E8E0F270E4F0B00A8BB58 /* AddFoodTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodTVCell.swift; sourceTree = "<group>"; };
+		84B82DF1270CB78500BAB5CF /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		84C5471A27020D53000CE65D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		84C547282705465F000CE65D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -56,6 +72,8 @@
 		84C5473127062E51000CE65D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealsDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		84C5473627063CF8000CE65D /* MealsDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsDetailTVC.swift; sourceTree = "<group>"; };
+		84D51B10270D0D140040B03D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D51B14270D0D260040B03D /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F0E0F626E59CC8002E9FA2 /* FoodExpert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExpert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F0E0F926E59CC8002E9FA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F0E0FB26E59CC8002E9FA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +83,9 @@
 		84F0E10826E59CCF002E9FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84F0E10A26E59CCF002E9FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryMainStoryboard.storyboard; sourceTree = "<group>"; };
+		A39970A512C6A7E5E199366E /* Pods-FoodExpert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodExpert.release.xcconfig"; path = "Target Support Files/Pods-FoodExpert/Pods-FoodExpert.release.xcconfig"; sourceTree = "<group>"; };
+		FA47F5A3270CD32400EED2E7 /* SearchBarCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCollectionReusableView.swift; sourceTree = "<group>"; };
+		FA47F5A5270CDA2000EED2E7 /* ReciepeImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciepeImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C547222702239A000CE65D /* FirebaseDatabase in Frameworks */,
-				84C5471E2702239A000CE65D /* FirebaseAnalytics in Frameworks */,
-				84C547202702239A000CE65D /* FirebaseAuth in Frameworks */,
+				15FED59F31BAD4BB2D43A8D5 /* Pods_FoodExpert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +103,8 @@
 		8413F10426EA7493003EEC04 /* DiaryControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */,
-				84C5472A2705E334000CE65D /* CircleProgressView.swift */,
-				84C5473127062E51000CE65D /* MealTableViewCell.swift */,
-				84C5473627063CF8000CE65D /* MealsDetailTVC.swift */,
+				84907174270C8B43001E9280 /* FoodDiaryVC */,
+				84907173270C8B22001E9280 /* MealsDetailTVC */,
 			);
 			path = DiaryControllers;
 			sourceTree = "<group>";
@@ -95,7 +112,8 @@
 		8413F10526EA74F5003EEC04 /* RecepesControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */,
+				849E8E06270DC90800A8BB58 /* RecipesMain */,
+				849E8E01270DC85800A8BB58 /* RecipeDetailVC */,
 			);
 			path = RecepesControllers;
 			sourceTree = "<group>";
@@ -103,7 +121,8 @@
 		8413F10626EA7506003EEC04 /* AddFoodControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */,
+				849E8E0C270E4B8800A8BB58 /* MainAddFoodController */,
+				849E8E09270E3E9500A8BB58 /* FoodSearchDetailVC.swift */,
 			);
 			path = AddFoodControllers;
 			sourceTree = "<group>";
@@ -124,12 +143,73 @@
 			path = SettingsControllers;
 			sourceTree = "<group>";
 		};
-		8413F11726F3AC50003EEC04 /* VerificationService */ = {
+		84907173270C8B22001E9280 /* MealsDetailTVC */ = {
 			isa = PBXGroup;
 			children = (
-				8413F11C26F3AD8B003EEC04 /* VerificationService.swift */,
+				84C5473627063CF8000CE65D /* MealsDetailTVC.swift */,
+				849E8E05270DC8DF00A8BB58 /* Cells */,
 			);
-			path = VerificationService;
+			path = MealsDetailTVC;
+			sourceTree = "<group>";
+		};
+		84907174270C8B43001E9280 /* FoodDiaryVC */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */,
+				84C5472A2705E334000CE65D /* CircleProgressView.swift */,
+				849E8E04270DC8CD00A8BB58 /* Cells */,
+			);
+			path = FoodDiaryVC;
+			sourceTree = "<group>";
+		};
+		849E8E01270DC85800A8BB58 /* RecipeDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				849E8E02270DC89500A8BB58 /* RecipeDetailVC.swift */,
+			);
+			path = RecipeDetailVC;
+			sourceTree = "<group>";
+		};
+		849E8E04270DC8CD00A8BB58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84C5473127062E51000CE65D /* MealTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		849E8E05270DC8DF00A8BB58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84907171270C8A59001E9280 /* FoodTVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		849E8E06270DC90800A8BB58 /* RecipesMain */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */,
+				FA47F5A2270CD30100EED2E7 /* Cells */,
+			);
+			path = RecipesMain;
+			sourceTree = "<group>";
+		};
+		849E8E0B270E4B6B00A8BB58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				849E8E0F270E4F0B00A8BB58 /* AddFoodTVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		849E8E0C270E4B8800A8BB58 /* MainAddFoodController */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */,
+				849E8E0B270E4B6B00A8BB58 /* Cells */,
+			);
+			path = MainAddFoodController;
 			sourceTree = "<group>";
 		};
 		84C5471927020D22000CE65D /* MainVC */ = {
@@ -160,6 +240,8 @@
 			children = (
 				84F0E0F826E59CC8002E9FA2 /* FoodExpert */,
 				84F0E0F726E59CC8002E9FA2 /* Products */,
+				D6E029DD6C8515D3CB4B3162 /* Pods */,
+				F9FD3C0A45FB72E556F97D00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +274,8 @@
 		84F0E11026E59CEB002E9FA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */,
+				849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */,
 				84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */,
 				84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */,
 				844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */,
@@ -238,6 +322,7 @@
 				8413F11326EA883C003EEC04 /* Meals.swift */,
 				8413F11526EA8A17003EEC04 /* Diets.swift */,
 				84C5472C2705FA70000CE65D /* User.swift */,
+				84907175270C8CF5001E9280 /* AddedFood.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,7 +330,6 @@
 		84F0E11526E59D3D002E9FA2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8413F11726F3AC50003EEC04 /* VerificationService */,
 				84F0E11626E59D5F002E9FA2 /* APIService */,
 			);
 			path = Services;
@@ -254,6 +338,7 @@
 		84F0E11626E59D5F002E9FA2 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
+				84B82DF1270CB78500BAB5CF /* ServerManager.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -266,6 +351,34 @@
 			path = SignUpControllers;
 			sourceTree = "<group>";
 		};
+		D6E029DD6C8515D3CB4B3162 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BCB6725A3B3764AE81BA7F2 /* Pods-FoodExpert.debug.xcconfig */,
+				A39970A512C6A7E5E199366E /* Pods-FoodExpert.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F9FD3C0A45FB72E556F97D00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84D51B14270D0D260040B03D /* FBLPromises.framework */,
+				84D51B10270D0D140040B03D /* Alamofire.framework */,
+				4914C2569606941FB042E219 /* Pods_FoodExpert.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA47F5A2270CD30100EED2E7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA47F5A3270CD32400EED2E7 /* SearchBarCollectionReusableView.swift */,
+				FA47F5A5270CDA2000EED2E7 /* ReciepeImageCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,20 +386,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84F0E10D26E59CCF002E9FA2 /* Build configuration list for PBXNativeTarget "FoodExpert" */;
 			buildPhases = (
+				D188B65EBF653C8DCFC17D93 /* [CP] Check Pods Manifest.lock */,
 				84F0E0F226E59CC8002E9FA2 /* Sources */,
 				84F0E0F326E59CC8002E9FA2 /* Frameworks */,
 				84F0E0F426E59CC8002E9FA2 /* Resources */,
+				B7C001A5F15520589205355C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FoodExpert;
-			packageProductDependencies = (
-				84C5471D2702239A000CE65D /* FirebaseAnalytics */,
-				84C5471F2702239A000CE65D /* FirebaseAuth */,
-				84C547212702239A000CE65D /* FirebaseDatabase */,
-			);
 			productName = FoodExpert;
 			productReference = 84F0E0F626E59CC8002E9FA2 /* FoodExpert.app */;
 			productType = "com.apple.product-type.application";
@@ -314,9 +424,6 @@
 				Base,
 			);
 			mainGroup = 84F0E0ED26E59CC7002E9FA2;
-			packageReferences = (
-				84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 84F0E0F726E59CC8002E9FA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,10 +438,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849E8E08270E3E4200A8BB58 /* FoodSearchDetail.storyboard in Resources */,
 				844BE63A26E8791B00C1E5A3 /* SignUpStoryboard.storyboard in Resources */,
 				84C5473527063C4E000CE65D /* MealsDetailStoryboard.storyboard in Resources */,
 				84F0E10926E59CCF002E9FA2 /* LaunchScreen.storyboard in Resources */,
 				84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */,
+				849E8E00270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard in Resources */,
 				84F0E10626E59CCF002E9FA2 /* Assets.xcassets in Resources */,
 				84F0E10126E59CC8002E9FA2 /* Main.storyboard in Resources */,
 				84F0E12226E873FE002E9FA2 /* DiaryMainStoryboard.storyboard in Resources */,
@@ -343,26 +452,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B7C001A5F15520589205355C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodExpert/Pods-FoodExpert-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodExpert/Pods-FoodExpert-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodExpert/Pods-FoodExpert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D188B65EBF653C8DCFC17D93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodExpert-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84F0E0F226E59CC8002E9FA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B82DF2270CB78500BAB5CF /* ServerManager.swift in Sources */,
 				84C5471B27020D53000CE65D /* MainVC.swift in Sources */,
+				849E8E03270DC89500A8BB58 /* RecipeDetailVC.swift in Sources */,
 				84C5473727063CF8000CE65D /* MealsDetailTVC.swift in Sources */,
 				84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */,
+				849E8E0A270E3E9500A8BB58 /* FoodSearchDetailVC.swift in Sources */,
 				8413F10826EA753C003EEC04 /* FoodDiaryVC.swift in Sources */,
 				84F0E0FA26E59CC8002E9FA2 /* AppDelegate.swift in Sources */,
 				84C5472B2705E335000CE65D /* CircleProgressView.swift in Sources */,
 				8413F0FF26E93D74003EEC04 /* CreateAccountVC.swift in Sources */,
 				84C5472D2705FA70000CE65D /* User.swift in Sources */,
+				FA47F5A6270CDA2000EED2E7 /* ReciepeImageCell.swift in Sources */,
 				8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */,
 				84F0E0FC26E59CC8002E9FA2 /* SceneDelegate.swift in Sources */,
+				FA47F5A4270CD32400EED2E7 /* SearchBarCollectionReusableView.swift in Sources */,
 				84C5473227062E51000CE65D /* MealTableViewCell.swift in Sources */,
-				8413F11D26F3AD8B003EEC04 /* VerificationService.swift in Sources */,
+				84907176270C8CF5001E9280 /* AddedFood.swift in Sources */,
 				8413F11226EA7B12003EEC04 /* SettingsTVC.swift in Sources */,
 				8413F11626EA8A17003EEC04 /* Diets.swift in Sources */,
+				849E8E10270E4F0B00A8BB58 /* AddFoodTVCell.swift in Sources */,
 				8413F10C26EA760C003EEC04 /* AddFoodTVC.swift in Sources */,
+				84907172270C8A59001E9280 /* FoodTVCell.swift in Sources */,
 				8413F11026EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift in Sources */,
 				84F0E10426E59CC8002E9FA2 /* FoodExpert.xcdatamodeld in Sources */,
 				8413F11426EA883C003EEC04 /* Meals.swift in Sources */,
@@ -509,6 +667,7 @@
 		};
 		84F0E10E26E59CCF002E9FA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BCB6725A3B3764AE81BA7F2 /* Pods-FoodExpert.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -528,6 +687,7 @@
 		};
 		84F0E10F26E59CCF002E9FA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A39970A512C6A7E5E199366E /* Pods-FoodExpert.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -567,35 +727,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		84C5471D2702239A000CE65D /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		84C5471F2702239A000CE65D /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		84C547212702239A000CE65D /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84C5471C27022399000CE65D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */ = {

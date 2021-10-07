@@ -19,8 +19,9 @@ class ReciepeImageCell: UICollectionViewCell {
         reciepImageView.image = nil
     }
     
-    func configure(receip: Recipe) {
-        reciepImageView.sd_setImage(with: URL(string: receip.image), placeholderImage: UIImage(named: "recipe_placeholder.png"))
-        reciepeLabel.text = receip.label
+    func configure(recipe: Recipe) {
+        reciepImageView.sd_setImage(with: URL(string: recipe.image), placeholderImage: UIImage(named: "recipe_placeholder.png"))
+        reciepeLabel.text = recipe.label
+        reciepeLabel.textColor = .white
     }
 }

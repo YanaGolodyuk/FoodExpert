@@ -12,10 +12,14 @@ class AddFoodTVC: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var foodHints: [FoodHint] = []
+    var meal: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.searchTextField.textColor = UIColor.white
+        title = "Search food"
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         getFood()
     }
 
@@ -26,18 +30,22 @@ class AddFoodTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        let food = foodHints[indexPath.row].food
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "AddFoodTVCell", for: indexPath) as? AddFoodTVCell {
+            if foodHints.count > indexPath.row {
+            cell.configure(food: foodHints[indexPath.row].food)
+            }
+            return cell
+        }
 
-        return cell
+        return UITableViewCell()
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let vc = UIStoryboard(name: "FoodSearchDetail", bundle: nil).instantiateInitialViewController() as? FoodSearchDetailVC {
-//            vc.food = food[indexPath.row]
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
+        if let vc = UIStoryboard(name: "FoodSearchDetail", bundle: nil).instantiateInitialViewController() as? FoodSearchDetailVC {
+            vc.foodHints = foodHints[indexPath.row]
+            vc.meal = meal
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -51,8 +59,9 @@ extension AddFoodTVC: UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        getFood(ingr: searchText)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.getFood(ingr: searchText)
+        }
     }
     
     func getFood(ingr: String = "") {

@@ -29,19 +29,17 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
     
-    //    var genaPidor: Bool = true
-//    var pidory: [String] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         mealsTableView.delegate = self
         mealsTableView.dataSource = self
         
-//        let id = UUID().uuidString
-//        print(genaPidor)
-//        print(pidory)
-//        print("ended")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,10 +60,5 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-//    {
-//        return 50 //or whatever you need
-//    }
     
 }
