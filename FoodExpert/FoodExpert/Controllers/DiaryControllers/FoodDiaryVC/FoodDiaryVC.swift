@@ -67,4 +67,5 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 //    {
 //        return 50 //or whatever you need
 //    }
+    
 }

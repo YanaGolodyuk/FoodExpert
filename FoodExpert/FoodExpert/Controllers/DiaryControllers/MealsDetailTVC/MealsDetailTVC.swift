@@ -9,8 +9,22 @@ import UIKit
 import SwiftUI
 
 class MealsDetailTVC: UITableViewController {
-
+    
     var meal: Meals?
+    
+    var food = ["Potato", "Chiken", "Fruit tea"]
+    
+    @IBOutlet weak var foodNameLbl: UILabel!
+    @IBOutlet weak var foodCaloriesLbl: UILabel!
+    @IBOutlet weak var grammsCountLbl: UILabel!
+    
+    @IBOutlet weak var mealTypeLbl: UILabel!
+    
+    @IBAction func addFoodBtnTapped(_ sender: UIButton) {
+        if let vc = UIStoryboard(name: "MealsDetailStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +32,8 @@ class MealsDetailTVC: UITableViewController {
         title = meal?.rawValue
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        mealTypeLbl.text = meal?.rawValue
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,25 +43,21 @@ class MealsDetailTVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return food.count + 1
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let food = food[indexPath.row]
+        cell.foodNameLbl.text = food.rawValue
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

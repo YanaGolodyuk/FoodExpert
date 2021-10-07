@@ -1,15 +1,17 @@
 //
-//  MealTableViewCell.swift
+//  FoodTVCell.swift
 //  FoodExpert
 //
-//  Created by admin on 30.09.2021.
+//  Created by admin on 05.10.2021.
 //
 
 import UIKit
 
-class MealTableViewCell: UITableViewCell{
+class FoodTVCell: UITableViewCell {
 
-    @IBOutlet weak var mealLabel: UILabel!
+    @IBOutlet weak var foodNameLbl: UILabel!
+    @IBOutlet weak var foodCaloriesLbl: UILabel!
+    @IBOutlet weak var rgammsCountLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +24,4 @@ class MealTableViewCell: UITableViewCell{
         // Configure the view for the selected state
     }
 
-    @IBAction func addMealTapped(_ sender: Any) {
-        
-    }
-    
 }
