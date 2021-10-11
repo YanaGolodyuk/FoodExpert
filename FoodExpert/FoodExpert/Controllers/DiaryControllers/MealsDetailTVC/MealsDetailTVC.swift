@@ -15,7 +15,7 @@ class MealsDetailTVC: UITableViewController {
     @IBOutlet weak var mealTypeLbl: UILabel!
     
     @IBAction func addFoodBtnTapped(_ sender: UIButton) {
-        if let vc = UIStoryboard(name: "DiaryMainStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
+        if let vc = UIStoryboard(name: "AddFoodStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
             vc.meal = mealTypeLbl.text
             navigationController?.pushViewController(vc, animated: true)
         }
