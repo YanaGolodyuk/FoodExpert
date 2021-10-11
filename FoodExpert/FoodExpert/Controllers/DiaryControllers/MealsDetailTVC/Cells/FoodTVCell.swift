@@ -1,10 +1,3 @@
-//
-//  FoodTVCell.swift
-//  FoodExpert
-//
-//  Created by admin on 05.10.2021.
-//
-
 import UIKit
 
 class FoodTVCell: UITableViewCell {
@@ -15,13 +8,15 @@ class FoodTVCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
+    func configure(by meal: Meal) {
+        foodNameLbl.text = meal.foodName
+        foodCaloriesLbl.text = "\(meal.calories) kcal"
+        rgammsCountLbl.text = "\(meal.measureType ?? "")"
+    }
 }

@@ -1,10 +1,3 @@
-//
-//  AddFoodTVC.swift
-//  FoodExpert
-//
-//  Created by admin on 09.09.2021.
-//
-
 import UIKit
 
 class AddFoodTVC: UITableViewController {
@@ -20,11 +13,11 @@ class AddFoodTVC: UITableViewController {
         title = "Search food"
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        getFood(ingr: "a")
         getFood()
     }
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodHints.count
     }
@@ -36,7 +29,6 @@ class AddFoodTVC: UITableViewController {
             }
             return cell
         }
-
         return UITableViewCell()
     }
 
@@ -46,6 +38,10 @@ class AddFoodTVC: UITableViewController {
             vc.meal = meal
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(false)
     }
 }
 

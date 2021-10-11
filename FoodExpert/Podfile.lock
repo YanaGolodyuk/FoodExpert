@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.4)
+  - CircleProgressView (1.2.0)
   - Firebase/Auth (8.8.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 8.8.0)
@@ -59,6 +60,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
+  - CircleProgressView
   - Firebase/Auth
   - Firebase/Database
   - FirebaseCore
@@ -68,6 +70,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CircleProgressView
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -84,6 +87,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  CircleProgressView: 6b5b091d59dc5e5d2fda84e637a40498cdc39937
   Firebase: 629510f1a9ddb235f3a7c5c8ceb23ba887f0f814
   FirebaseAuth: bcf0adeff88bda5dcb3beeabe5760f1226ab7b2f
   FirebaseCore: 98b29e3828f0a53651c363937a7f7d92a19f1ba2
@@ -98,6 +102,6 @@ SPEC CHECKSUMS:
   SDWebImage: 4ea20cca2986adc5aacde07aa686742fd4c67a37
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 9ca49e8827e19730c5ebbd674b300c47588011dc
+PODFILE CHECKSUM: 9f8fc7bf31346bd490da08170375df8d53eb1d4d
 
 COCOAPODS: 1.10.1

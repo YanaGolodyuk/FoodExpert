@@ -6,10 +6,11 @@ target 'FoodExpert' do
   use_frameworks!
   
   # Pods for FoodExpert
-  pod 'Alamofire', '~> 5.4'
-  pod 'SwiftyJSON', '~> 4.0'
+#  pod 'Alamofire', '~> 5.4'
+#  pod 'SwiftyJSON', '~> 4.0'
   pod 'FirebaseCore'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'SDWebImage'
+  pod 'CircleProgressView'
 end

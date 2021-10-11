@@ -13,23 +13,27 @@
 		8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */; };
 		8413F10C26EA760C003EEC04 /* AddFoodTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */; };
 		8413F11026EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10F26EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift */; };
-		8413F11226EA7B12003EEC04 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11126EA7B12003EEC04 /* SettingsTVC.swift */; };
 		8413F11426EA883C003EEC04 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11326EA883C003EEC04 /* Meals.swift */; };
 		8413F11626EA8A17003EEC04 /* Diets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11526EA8A17003EEC04 /* Diets.swift */; };
+		843342CF2711FF570005BBDC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843342CE2711FF560005BBDC /* CoreDataManager.swift */; };
+		843342D42712338E0005BBDC /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843342D32712338E0005BBDC /* Calendar.storyboard */; };
+		843342D6271233D10005BBDC /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843342D5271233D10005BBDC /* CalendarVC.swift */; };
+		843342D8271333B40005BBDC /* AccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843342D7271333B40005BBDC /* AccountStoryboard.storyboard */; };
+		843342DA271335740005BBDC /* AddFoodStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843342D9271335740005BBDC /* AddFoodStoryboard.storyboard */; };
+		843342DC2713367D0005BBDC /* RecipesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843342DB2713367D0005BBDC /* RecipesStoryboard.storyboard */; };
 		844BE63A26E8791B00C1E5A3 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */; };
 		84907172270C8A59001E9280 /* FoodTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907171270C8A59001E9280 /* FoodTVCell.swift */; };
-		84907176270C8CF5001E9280 /* AddedFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907175270C8CF5001E9280 /* AddedFood.swift */; };
 		849E8E00270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */; };
 		849E8E03270DC89500A8BB58 /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E02270DC89500A8BB58 /* RecipeDetailVC.swift */; };
 		849E8E08270E3E4200A8BB58 /* FoodSearchDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */; };
 		849E8E0A270E3E9500A8BB58 /* FoodSearchDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E09270E3E9500A8BB58 /* FoodSearchDetailVC.swift */; };
 		849E8E10270E4F0B00A8BB58 /* AddFoodTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E0F270E4F0B00A8BB58 /* AddFoodTVCell.swift */; };
+		84A5D280271345E80058138B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10526E59CCF002E9FA2 /* Assets.xcassets */; };
 		84B82DF2270CB78500BAB5CF /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B82DF1270CB78500BAB5CF /* ServerManager.swift */; };
 		84C5471B27020D53000CE65D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5471A27020D53000CE65D /* MainVC.swift */; };
 		84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */; };
 		84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C547282705465F000CE65D /* GoogleService-Info.plist */; };
 		84C5472B2705E335000CE65D /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5472A2705E334000CE65D /* CircleProgressView.swift */; };
-		84C5472D2705FA70000CE65D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5472C2705FA70000CE65D /* User.swift */; };
 		84C5473227062E51000CE65D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5473127062E51000CE65D /* MealTableViewCell.swift */; };
 		84C5473527063C4E000CE65D /* MealsDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */; };
 		84C5473727063CF8000CE65D /* MealsDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5473627063CF8000CE65D /* MealsDetailTVC.swift */; };
@@ -37,7 +41,6 @@
 		84F0E0FC26E59CC8002E9FA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E0FB26E59CC8002E9FA2 /* SceneDelegate.swift */; };
 		84F0E10126E59CC8002E9FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E0FF26E59CC8002E9FA2 /* Main.storyboard */; };
 		84F0E10426E59CC8002E9FA2 /* FoodExpert.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */; };
-		84F0E10626E59CCF002E9FA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10526E59CCF002E9FA2 /* Assets.xcassets */; };
 		84F0E10926E59CCF002E9FA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10726E59CCF002E9FA2 /* LaunchScreen.storyboard */; };
 		84F0E12226E873FE002E9FA2 /* DiaryMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */; };
 		FA47F5A4270CD32400EED2E7 /* SearchBarCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47F5A3270CD32400EED2E7 /* SearchBarCollectionReusableView.swift */; };
@@ -52,12 +55,16 @@
 		8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCollectionVC.swift; sourceTree = "<group>"; };
 		8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodTVC.swift; sourceTree = "<group>"; };
 		8413F10F26EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccInfoAndSettingsVC.swift; sourceTree = "<group>"; };
-		8413F11126EA7B12003EEC04 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		8413F11326EA883C003EEC04 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		8413F11526EA8A17003EEC04 /* Diets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diets.swift; sourceTree = "<group>"; };
+		843342CE2711FF560005BBDC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		843342D32712338E0005BBDC /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		843342D5271233D10005BBDC /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		843342D7271333B40005BBDC /* AccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountStoryboard.storyboard; sourceTree = "<group>"; };
+		843342D9271335740005BBDC /* AddFoodStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFoodStoryboard.storyboard; sourceTree = "<group>"; };
+		843342DB2713367D0005BBDC /* RecipesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipesStoryboard.storyboard; sourceTree = "<group>"; };
 		844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		84907171270C8A59001E9280 /* FoodTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTVCell.swift; sourceTree = "<group>"; };
-		84907175270C8CF5001E9280 /* AddedFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedFood.swift; sourceTree = "<group>"; };
 		849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		849E8E02270DC89500A8BB58 /* RecipeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
 		849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodSearchDetail.storyboard; sourceTree = "<group>"; };
@@ -68,7 +75,6 @@
 		84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		84C547282705465F000CE65D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84C5472A2705E334000CE65D /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
-		84C5472C2705FA70000CE65D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84C5473127062E51000CE65D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealsDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		84C5473627063CF8000CE65D /* MealsDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsDetailTVC.swift; sourceTree = "<group>"; };
@@ -103,8 +109,8 @@
 		8413F10426EA7493003EEC04 /* DiaryControllers */ = {
 			isa = PBXGroup;
 			children = (
-				84907174270C8B43001E9280 /* FoodDiaryVC */,
 				84907173270C8B22001E9280 /* MealsDetailTVC */,
+				84907174270C8B43001E9280 /* FoodDiaryVC */,
 			);
 			path = DiaryControllers;
 			sourceTree = "<group>";
@@ -135,14 +141,6 @@
 			path = AccountControllers;
 			sourceTree = "<group>";
 		};
-		8413F10E26EA77D2003EEC04 /* SettingsControllers */ = {
-			isa = PBXGroup;
-			children = (
-				8413F11126EA7B12003EEC04 /* SettingsTVC.swift */,
-			);
-			path = SettingsControllers;
-			sourceTree = "<group>";
-		};
 		84907173270C8B22001E9280 /* MealsDetailTVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */,
-				84C5472A2705E334000CE65D /* CircleProgressView.swift */,
 				849E8E04270DC8CD00A8BB58 /* Cells */,
+				843342D5271233D10005BBDC /* CalendarVC.swift */,
+				84C5472A2705E334000CE65D /* CircleProgressView.swift */,
 			);
 			path = FoodDiaryVC;
 			sourceTree = "<group>";
@@ -224,15 +223,10 @@
 			isa = PBXGroup;
 			children = (
 				84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */,
+				843342CE2711FF560005BBDC /* CoreDataManager.swift */,
+				84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		84C5472E27060509000CE65D /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		84F0E0ED26E59CC7002E9FA2 = {
@@ -256,7 +250,6 @@
 		84F0E0F826E59CC8002E9FA2 /* FoodExpert */ = {
 			isa = PBXGroup;
 			children = (
-				84C5472E27060509000CE65D /* Constants */,
 				84C547252704DA2F000CE65D /* Managers */,
 				84F0E11526E59D3D002E9FA2 /* Services */,
 				84F0E11426E59D2E002E9FA2 /* Models */,
@@ -266,7 +259,6 @@
 				84F0E11326E59D23002E9FA2 /* Sources */,
 				84C547282705465F000CE65D /* GoogleService-Info.plist */,
 				84F0E10A26E59CCF002E9FA2 /* Info.plist */,
-				84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */,
 			);
 			path = FoodExpert;
 			sourceTree = "<group>";
@@ -274,8 +266,12 @@
 		84F0E11026E59CEB002E9FA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				843342D7271333B40005BBDC /* AccountStoryboard.storyboard */,
 				849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */,
+				843342D9271335740005BBDC /* AddFoodStoryboard.storyboard */,
 				849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */,
+				843342DB2713367D0005BBDC /* RecipesStoryboard.storyboard */,
+				843342D32712338E0005BBDC /* Calendar.storyboard */,
 				84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */,
 				84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */,
 				844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */,
@@ -297,7 +293,6 @@
 		84F0E11226E59D12002E9FA2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8413F10E26EA77D2003EEC04 /* SettingsControllers */,
 				8413F10D26EA77B9003EEC04 /* AccountControllers */,
 				8413F10626EA7506003EEC04 /* AddFoodControllers */,
 				8413F10526EA74F5003EEC04 /* RecepesControllers */,
@@ -321,8 +316,6 @@
 			children = (
 				8413F11326EA883C003EEC04 /* Meals.swift */,
 				8413F11526EA8A17003EEC04 /* Diets.swift */,
-				84C5472C2705FA70000CE65D /* User.swift */,
-				84907175270C8CF5001E9280 /* AddedFood.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -439,13 +432,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				849E8E08270E3E4200A8BB58 /* FoodSearchDetail.storyboard in Resources */,
+				843342DA271335740005BBDC /* AddFoodStoryboard.storyboard in Resources */,
+				843342DC2713367D0005BBDC /* RecipesStoryboard.storyboard in Resources */,
 				844BE63A26E8791B00C1E5A3 /* SignUpStoryboard.storyboard in Resources */,
 				84C5473527063C4E000CE65D /* MealsDetailStoryboard.storyboard in Resources */,
 				84F0E10926E59CCF002E9FA2 /* LaunchScreen.storyboard in Resources */,
+				84A5D280271345E80058138B /* Assets.xcassets in Resources */,
+				843342D8271333B40005BBDC /* AccountStoryboard.storyboard in Resources */,
 				84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */,
 				849E8E00270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard in Resources */,
-				84F0E10626E59CCF002E9FA2 /* Assets.xcassets in Resources */,
 				84F0E10126E59CC8002E9FA2 /* Main.storyboard in Resources */,
+				843342D42712338E0005BBDC /* Calendar.storyboard in Resources */,
 				84F0E12226E873FE002E9FA2 /* DiaryMainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,21 +501,20 @@
 				849E8E03270DC89500A8BB58 /* RecipeDetailVC.swift in Sources */,
 				84C5473727063CF8000CE65D /* MealsDetailTVC.swift in Sources */,
 				84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */,
+				843342D6271233D10005BBDC /* CalendarVC.swift in Sources */,
 				849E8E0A270E3E9500A8BB58 /* FoodSearchDetailVC.swift in Sources */,
 				8413F10826EA753C003EEC04 /* FoodDiaryVC.swift in Sources */,
 				84F0E0FA26E59CC8002E9FA2 /* AppDelegate.swift in Sources */,
 				84C5472B2705E335000CE65D /* CircleProgressView.swift in Sources */,
 				8413F0FF26E93D74003EEC04 /* CreateAccountVC.swift in Sources */,
-				84C5472D2705FA70000CE65D /* User.swift in Sources */,
 				FA47F5A6270CDA2000EED2E7 /* ReciepeImageCell.swift in Sources */,
 				8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */,
 				84F0E0FC26E59CC8002E9FA2 /* SceneDelegate.swift in Sources */,
 				FA47F5A4270CD32400EED2E7 /* SearchBarCollectionReusableView.swift in Sources */,
 				84C5473227062E51000CE65D /* MealTableViewCell.swift in Sources */,
-				84907176270C8CF5001E9280 /* AddedFood.swift in Sources */,
-				8413F11226EA7B12003EEC04 /* SettingsTVC.swift in Sources */,
 				8413F11626EA8A17003EEC04 /* Diets.swift in Sources */,
 				849E8E10270E4F0B00A8BB58 /* AddFoodTVCell.swift in Sources */,
+				843342CF2711FF570005BBDC /* CoreDataManager.swift in Sources */,
 				8413F10C26EA760C003EEC04 /* AddFoodTVC.swift in Sources */,
 				84907172270C8A59001E9280 /* FoodTVCell.swift in Sources */,
 				8413F11026EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift in Sources */,
@@ -735,7 +731,8 @@
 				84F0E10326E59CC8002E9FA2 /* FoodExpert.xcdatamodel */,
 			);
 			currentVersion = 84F0E10326E59CC8002E9FA2 /* FoodExpert.xcdatamodel */;
-			path = FoodExpert.xcdatamodeld;
+			name = FoodExpert.xcdatamodeld;
+			path = ../FoodExpert.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

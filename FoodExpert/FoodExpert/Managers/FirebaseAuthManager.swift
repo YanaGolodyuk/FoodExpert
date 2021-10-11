@@ -1,10 +1,3 @@
-//
-//  FirebaseAuthManager.swift
-//  FoodExpert
-//
-//  Created by admin on 29.09.2021.
-//
-
 import FirebaseAuth
 import Firebase
 import UIKit

@@ -1,29 +1,23 @@
-//
-//  AccInfoAndSettingsVC.swift
-//  FoodExpert
-//
-//  Created by admin on 09.09.2021.
-//
-
 import UIKit
+import Firebase
 
 class AccInfoAndSettingsVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    var userName: String?
+    @IBOutlet weak var accountImage: UIImageView!
+    @IBOutlet weak var userNameLbl: UILabel!
+    @IBOutlet weak var mealPlanLlb: UILabel!
+    
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+            } catch let err {
+                print(err)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    */
-
 }

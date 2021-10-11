@@ -1,29 +1,33 @@
-//
-//  CalendarVC.swift
-//  FoodExpert
-//
-//  Created by admin on 09.10.2021.
-//
-
 import UIKit
 
 class CalendarVC: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let date = CoreDataManger.shared.currentSelectedDate {
+            datePicker.setDate(date, animated: false)
+        }
+        definesPresentationContext = true
+        self.view.backgroundColor = .clear
+        self.view.isOpaque = false
+        self.view.tintColor = .clear
+        modalPresentationStyle = .overCurrentContext
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch? = touches.first
+        if touch?.view != datePicker {
+            CoreDataManger.shared.updateNote(by: datePicker.date)
+            dismiss(animated: true, completion: nil)
+        }
     }
-    */
+
+    @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+        CoreDataManger.shared.updateNote(by: sender.date)
+        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "dateChanged"), object: nil)
+    }
 
 }

@@ -1,30 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UCf-8y-DTW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--Recipes CollectionVC-->
+        <scene sceneID="B3j-o0-9i7">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController id="Rru-Wi-YJb" customClass="RecipesCollectionVC" customModule="FoodExpert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VnR-aB-MUd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WOi-7S-gcA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="goB-5v-dN7"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.173813791" green="0.173813791" blue="0.173813791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Rru-Wi-YJb" id="dCQ-Ix-mq2"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i1U-Kt-Qkr">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <color key="backgroundColor" red="0.173813791" green="0.173813791" blue="0.173813791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="7V7-He-f4X">
+                                    <size key="itemSize" width="131" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReciepeImageCell" id="FQx-eI-Zke" customClass="ReciepeImageCell" customModule="FoodExpert" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yxj-P2-rTN">
+                                            <rect key="frame" x="0.0" y="0.0" width="131" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recipe_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="kKo-bZ-SLE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="131" height="108"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xu9-17-7jU">
+                                                    <rect key="frame" x="0.0" y="108" width="131" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="xu9-17-7jU" secondAttribute="trailing" id="6nw-7h-njO"/>
+                                                <constraint firstItem="xu9-17-7jU" firstAttribute="centerX" secondItem="yxj-P2-rTN" secondAttribute="centerX" id="VBG-k7-p9L"/>
+                                                <constraint firstAttribute="bottom" secondItem="xu9-17-7jU" secondAttribute="bottom" id="Whl-Qc-HYR"/>
+                                                <constraint firstItem="kKo-bZ-SLE" firstAttribute="leading" secondItem="yxj-P2-rTN" secondAttribute="leading" id="j9b-tI-yeH"/>
+                                                <constraint firstItem="kKo-bZ-SLE" firstAttribute="top" secondItem="yxj-P2-rTN" secondAttribute="top" id="jLA-4c-vS9"/>
+                                                <constraint firstAttribute="trailing" secondItem="kKo-bZ-SLE" secondAttribute="trailing" id="jsH-Ae-n4M"/>
+                                                <constraint firstAttribute="bottom" secondItem="kKo-bZ-SLE" secondAttribute="bottom" constant="20" id="mRv-ow-3mh"/>
+                                                <constraint firstItem="xu9-17-7jU" firstAttribute="leading" secondItem="yxj-P2-rTN" secondAttribute="leading" id="tAk-N2-ukf"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="reciepImageView" destination="kKo-bZ-SLE" id="vpn-C6-JLz"/>
+                                            <outlet property="reciepeLabel" destination="xu9-17-7jU" id="g7k-Dh-dDD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rru-Wi-YJb" id="gj7-DF-Ugz"/>
+                                    <outlet property="delegate" destination="Rru-Wi-YJb" id="rpg-OH-vvO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="57T-2N-Frf"/>
+                        <color key="backgroundColor" white="0.16220030490000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WOi-7S-gcA" firstAttribute="trailing" secondItem="57T-2N-Frf" secondAttribute="trailing" id="0Mq-WU-CSw"/>
+                            <constraint firstItem="57T-2N-Frf" firstAttribute="trailing" secondItem="i1U-Kt-Qkr" secondAttribute="trailing" id="BpQ-kJ-xHH"/>
+                            <constraint firstItem="WOi-7S-gcA" firstAttribute="leading" secondItem="57T-2N-Frf" secondAttribute="leading" id="Hw9-HF-3Zf"/>
+                            <constraint firstItem="WOi-7S-gcA" firstAttribute="top" secondItem="57T-2N-Frf" secondAttribute="top" id="a4n-Ro-EaV"/>
+                            <constraint firstItem="i1U-Kt-Qkr" firstAttribute="top" secondItem="WOi-7S-gcA" secondAttribute="bottom" id="aea-9v-fBH"/>
+                            <constraint firstItem="i1U-Kt-Qkr" firstAttribute="bottom" secondItem="57T-2N-Frf" secondAttribute="bottom" id="hhi-5X-NzI"/>
+                            <constraint firstItem="i1U-Kt-Qkr" firstAttribute="leading" secondItem="57T-2N-Frf" secondAttribute="leading" id="vEm-x9-snY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6Jp-zl-T9z">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="EEn-Su-Yji">
+                            <rect key="frame" x="49.5" y="5.5" width="315" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Breakfast"/>
+                                <segment title="Lunch"/>
+                                <segment title="Dinner"/>
+                                <segment title="Snack"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedValueChanged:" destination="Rru-Wi-YJb" eventType="valueChanged" id="jo7-S5-azu"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="i1U-Kt-Qkr" id="dV1-XQ-8fQ"/>
+                        <outlet property="searchBar" destination="WOi-7S-gcA" id="GhL-mK-OFg"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BX6-Kg-lZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2154" y="-231"/>
+        </scene>
+        <!--Recipes-->
+        <scene sceneID="O5E-PD-VqZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UCf-8y-DTW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recipes" image="book.fill" catalog="system" id="y4J-Su-Rsy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAh-Ow-l3R">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rru-Wi-YJb" kind="relationship" relationship="rootViewController" id="uvu-UH-vaX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBb-Zf-F01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="-230"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="recipe_placeholder" width="350" height="250"/>
     </resources>
 </document>

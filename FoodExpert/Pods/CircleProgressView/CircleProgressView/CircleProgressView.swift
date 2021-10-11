@@ -1,3 +1,11 @@
+//
+//  CircleProgressView.swift
+//
+//
+//  Created by Eric Rolf on 8/11/14.
+//  Copyright (c) 2014 Eric Rolf, Cardinal Solutions Group. All rights reserved.
+//
+
 import UIKit
 
 @objc @IBDesignable open class CircleProgressView: UIView {
@@ -175,6 +183,7 @@ import UIKit
     }
 
     //MARK: - Progress Update
+
     @objc open func setProgress(_ newProgress: Double, animated: Bool) {
 
         if animated {
@@ -187,6 +196,7 @@ import UIKit
     }
 
     //MARK: - CADisplayLink Tick
+
     @objc internal func displayLinkTick() {
 
         let renderTime = refreshRate.isZero ? displayLink!.duration : refreshRate

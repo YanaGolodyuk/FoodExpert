@@ -1,10 +1,3 @@
-//
-//  Diets.swift
-//  FoodExpert
-//
-//  Created by admin on 09.09.2021.
-//
-
 import Foundation
 
 enum Diets: String {

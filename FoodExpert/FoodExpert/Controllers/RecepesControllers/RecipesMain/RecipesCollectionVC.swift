@@ -1,16 +1,11 @@
-//
-//  RecipesCollectionVC.swift
-//  FoodExpert
-//
-//  Created by admin on 09.09.2021.
-//
-
 import UIKit
 
 class RecipesCollectionVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var isSeachBarAnimationCompleted: Bool = false
     
     var recipes: [Recipe] = []
     
@@ -30,10 +25,8 @@ class RecipesCollectionVC: UIViewController, UICollectionViewDataSource, UIColle
     }
     
      func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
 
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recipes.count
@@ -46,7 +39,6 @@ class RecipesCollectionVC: UIViewController, UICollectionViewDataSource, UIColle
             }
             return cell
         }
-    
         return UICollectionViewCell()
     }
     
@@ -55,7 +47,6 @@ class RecipesCollectionVC: UIViewController, UICollectionViewDataSource, UIColle
             vc.recipes = recipes[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
-        //TODO: - тут переход на следуюзий экран пишешь. внутрь следующего экрана положи recipe, и из него на следующем экране доставай всю нужную тебе инфук
     }
 }
 
@@ -68,7 +59,6 @@ extension RecipesCollectionVC: UICollectionViewDelegateFlowLayout {
         }
 }
 
-
 extension RecipesCollectionVC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -79,15 +69,18 @@ extension RecipesCollectionVC: UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.getReceipt(q: searchText)
+        if isSeachBarAnimationCompleted {
+            getReceipt(q: searchText)
         }
     }
     
     func getReceipt(q: String = "") {
+        isSeachBarAnimationCompleted = false
         ServerManager.shared.getRceipts(q: q, mealType: selectedMealType.rawValue, completion: { recieps in
             self.recipes = recieps
+            
             DispatchQueue.main.async {
+                self.isSeachBarAnimationCompleted = true
                 self.collectionView.reloadData()
             }
         })

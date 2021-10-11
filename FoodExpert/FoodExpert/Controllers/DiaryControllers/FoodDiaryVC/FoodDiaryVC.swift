@@ -1,8 +1,13 @@
 import UIKit
+import CoreData
 
-class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var meals: [Meals] = Meals.allCases
+    
+    var userName: String = ""
+    
+    var notes = [Note]()
     
     @IBOutlet weak var mealPlanLabel: UILabel!
     
@@ -21,20 +26,35 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var fatsIntakeLabel: UILabel!
     @IBOutlet weak var fatsIntakeProgressView: UIProgressView!
     
+    @IBOutlet weak var showPreviousDayBtn: UIButton!
+    @IBOutlet weak var dateSetBtn: UIButton!
+    @IBOutlet weak var showNextDayBtn: UIButton!
+    
     @IBOutlet weak var mealsTableView: UITableView!
     
     @IBAction func addButtonAction(_ sender: UIButton) {
-        if let vc = UIStoryboard(name: "DiaryMainStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
+        if let vc = UIStoryboard(name: "AddFoodStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dateSetBtn.setTitle(Date().toString(), for: .normal)
         mealsTableView.delegate = self
         mealsTableView.dataSource = self
+        navigationController?.navigationBar.isHidden = true
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateNote), name: NSNotification.Name.init(rawValue: "dateChanged"), object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func updateNote() {
+        let date = CoreDataManger.shared.currentSelectedDate ?? Date()
+        dateSetBtn.setTitle(date.toString(), for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,4 +81,18 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+}
+
+@IBDesignable extension UIView {
+
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
 }

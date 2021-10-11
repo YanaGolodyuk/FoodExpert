@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 //Recipe
@@ -22,6 +20,7 @@ struct RecipeHit: Decodable {
 struct Recipe: Decodable {
     var label: String
     var image: String
+    var url: String
     var ingredientLines: [String]
     var calories: Float
     var mealType: [String]
@@ -46,7 +45,7 @@ struct FoodNutrient: Decodable {
     var CHOCDF: Float
 }
 
-struct Measure: Decodable{
+struct Measure: Decodable {
     var uri: String
     var label: String
     var weight: Float
