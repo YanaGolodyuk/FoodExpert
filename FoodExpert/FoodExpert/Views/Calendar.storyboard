@@ -45,7 +45,6 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6BJ-5u-obG" secondAttribute="trailing" id="8u1-zo-Qtm"/>
                             <constraint firstItem="6BJ-5u-obG" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="EYG-Kw-QjQ"/>
@@ -55,6 +54,7 @@
                     <value key="contentSizeForViewInPopover" type="size" width="414" height="330"/>
                     <connections>
                         <outlet property="datePicker" destination="VB5-lB-ZgZ" id="mfc-aX-xQx"/>
+                        <outlet property="superView" destination="5EZ-qb-Rvc" id="iQC-7x-PUV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

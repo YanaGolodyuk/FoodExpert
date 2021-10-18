@@ -18,6 +18,6 @@ class AddFoodTVCell: UITableViewCell {
         foodNameLbl.text = food.label
         guard let brand = food.brand else {return}
         brandLbl.text = brand + "·"
-        caloriesCountLbl.text = "\(Int(food.nutrients.ENERC_KCAL)) g"
+        caloriesCountLbl.text = "\(Int(food.nutrients.ENERC_KCAL)) kcal"
     }
 }

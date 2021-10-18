@@ -15,6 +15,7 @@ class AddFoodTVC: UITableViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         getFood(ingr: "a")
         getFood()
+        self.hideKeyboardWhenTappedAround()
     }
 
     // MARK: - Table view data source

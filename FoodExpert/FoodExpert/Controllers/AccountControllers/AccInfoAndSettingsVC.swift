@@ -3,7 +3,6 @@ import Firebase
 
 class AccInfoAndSettingsVC: UIViewController {
 
-    var userName: String?
     @IBOutlet weak var accountImage: UIImageView!
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var mealPlanLlb: UILabel!
@@ -19,5 +18,6 @@ class AccInfoAndSettingsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameLbl.text = CoreDataManger.shared.currentUser?.name
     }
 }

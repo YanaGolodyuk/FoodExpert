@@ -129,6 +129,7 @@
                     <navigationItem key="navigationItem" id="YRz-lD-deG"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="mNW-7x-yU6" id="nuj-SB-cdV"/>
+                        <outlet property="backgroundImageView" destination="WJJ-eL-T32" id="d4g-X8-bFg"/>
                         <outlet property="emailTF" destination="j1l-tl-Luf" id="hpv-Vr-W1y"/>
                         <outlet property="passTF" destination="F6k-4g-A4E" id="cYn-VG-vpU"/>
                     </connections>

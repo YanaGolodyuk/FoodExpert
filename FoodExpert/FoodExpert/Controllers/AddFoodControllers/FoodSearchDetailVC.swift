@@ -21,7 +21,7 @@ class FoodSearchDetailVC: UIViewController {
     @IBOutlet weak var quantityTF: UITextField!
     @IBOutlet weak var typeQuantityPickerView: UIPickerView!
     @IBOutlet weak var totalCaloriesCountLbl: UILabel!
-    @IBOutlet weak var mealPickerView: UIPickerView!
+//    @IBOutlet weak var mealPickerView: UIPickerView!
     
     @IBOutlet weak var proteinsCountLbl: UILabel!
     @IBOutlet weak var fatsCountLbl: UILabel!
@@ -37,11 +37,12 @@ class FoodSearchDetailVC: UIViewController {
         super.viewDidLoad()
         typeQuantityPickerView.dataSource = self
         typeQuantityPickerView.delegate = self
-        mealPickerView.dataSource = self
-        mealPickerView.delegate = self
+//        mealPickerView.dataSource = self
+//        mealPickerView.delegate = self
         quantityTF.text = "1"
         gramsQuantity = Int(foodHints?.measures.first?.weight ?? Float(0))
         configure()
+        self.hideKeyboardWhenTappedAround()
     }
     
     func configure() {
@@ -77,13 +78,14 @@ class FoodSearchDetailVC: UIViewController {
             let quntityValue = Double(quantityTFString) ?? 0
             let resultValue = Double(energyKcalValue * Double(gramsQuantity) * quntityValue)
             let roundedResultDoubleValue = round(10 * resultValue) / 10
-            if roundedResultDoubleValue.truncatingRemainder(dividingBy: 1) == 0 {
-                currentRoundedResultDoubleValueInt = Int(roundedResultDoubleValue)
-                return "\(currentRoundedResultDoubleValueInt)"
-            } else {
-                currentRoundedResultDoubleValue = roundedResultDoubleValue
-                return "\(currentRoundedResultDoubleValue)"
-            }
+//            if roundedResultDoubleValue.truncatingRemainder(dividingBy: 1) == 0 {
+//                currentRoundedResultDoubleValueInt = Int(roundedResultDoubleValue)
+//                return "\(currentRoundedResultDoubleValueInt)"
+//            } else {
+//                currentRoundedResultDoubleValue = roundedResultDoubleValue
+//                return "\(currentRoundedResultDoubleValue)"
+//            }
+            return "\(roundedResultDoubleValue)"
         } else {
             let alert = UIAlertController(title: "", message: "foodHints error", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -100,32 +102,32 @@ extension FoodSearchDetailVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == typeQuantityPickerView {
+//        if pickerView == typeQuantityPickerView {
             guard let foodHints = foodHints else { return 0 }
             return foodHints.measures.count
-        }
-        return Meals.allCases.count
+//        }
+//        return Meals.allCases.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == typeQuantityPickerView {
+//        if pickerView == typeQuantityPickerView {
             guard let measure = foodHints?.measures[row] else { return }
             gramsQuantity = Int(measure.weight)
             configure()
-        } else {
-            let mealObject = Meals.allCases[row]
-            meal = mealObject.rawValue
-        }
+//        } else {
+//            let mealObject = Meals.allCases[row]
+//            meal = mealObject.rawValue
+//        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == typeQuantityPickerView {
+//        if pickerView == typeQuantityPickerView {
             guard let foodHints = foodHints else { return "" }
             gramsQuantity = Int(foodHints.measures[row].weight)
             measureType = (foodHints.measures[row].label + " \(gramsQuantity) g")
             return measureType ?? "" + "     􀆏"
-        }
-        return Meals.allCases[row].rawValue
+//        }
+//        return Meals.allCases[row].rawValue
     }
 }
 

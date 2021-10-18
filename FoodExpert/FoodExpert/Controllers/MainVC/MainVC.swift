@@ -3,13 +3,18 @@ import UIKit
 class MainVC: UIViewController {
     
     var userName: User?
+    var name:String?
     
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passTF: UITextField!
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
     }
    
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +27,6 @@ class MainVC: UIViewController {
         guard
             let email = emailTF.text, !email.isEmpty,
             let password = passTF.text, !password.isEmpty
-
         else {
             return
         }
@@ -36,7 +40,6 @@ class MainVC: UIViewController {
             self.activityIndicatorView.stopAnimating()
             switch success {
             case true :
-
                 CoreDataManger.shared.authorize(with: email)
                 if let foodDiaryVC = UIStoryboard(name: "DiaryMainStoryboard", bundle: .main).instantiateInitialViewController() {
                     foodDiaryVC.modalPresentationStyle = .fullScreen
@@ -48,5 +51,17 @@ class MainVC: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
         }
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

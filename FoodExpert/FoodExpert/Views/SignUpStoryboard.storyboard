@@ -162,6 +162,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="QQt-on-w2H" id="UIP-1w-iuz"/>
                         <outlet property="emailTF" destination="Efj-Rb-pGm" id="FUg-xU-NHV"/>
                         <outlet property="nameTF" destination="E8S-fB-dko" id="bNm-Tp-C4x"/>
                         <outlet property="passTF" destination="kUs-Yj-9nr" id="UKI-Ux-U9l"/>

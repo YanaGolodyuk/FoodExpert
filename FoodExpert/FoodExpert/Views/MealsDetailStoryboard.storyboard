@@ -21,6 +21,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundMain" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-LN-Baz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFX-S2-40U">
                                     <rect key="frame" x="30" y="95" width="217" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -29,10 +32,16 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.390179952" green="0.390179952" blue="0.390179952" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.4844821968463936" green="0.37689678636990037" blue="0.27495303695091811" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="pCI-LN-Baz" secondAttribute="trailing" id="69M-a1-8ux"/>
+                                <constraint firstAttribute="bottom" secondItem="pCI-LN-Baz" secondAttribute="bottom" id="97B-pN-t4n"/>
+                                <constraint firstItem="pCI-LN-Baz" firstAttribute="leading" secondItem="Ei7-ix-AgZ" secondAttribute="leading" id="cjh-ZE-g4y"/>
+                                <constraint firstItem="pCI-LN-Baz" firstAttribute="top" secondItem="Ei7-ix-AgZ" secondAttribute="top" id="kOj-ds-Nq5"/>
+                            </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" id="if1-fG-sW2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell1" id="if1-fG-sW2">
                                 <rect key="frame" x="0.0" y="194.5" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="if1-fG-sW2" id="K3I-vN-2Rc">
@@ -64,7 +73,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.16220030490000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="C7V-KA-wtq" customClass="FoodTVCell" customModule="FoodExpert" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="C7V-KA-wtq" customClass="FoodTVCell" customModule="FoodExpert" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="259.5" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C7V-KA-wtq" id="cQY-SS-stS">
@@ -138,4 +147,7 @@
             <point key="canvasLocation" x="-47.826086956521742" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundMain" width="750" height="1125"/>
+    </resources>
 </document>

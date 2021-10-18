@@ -16,14 +16,13 @@ class MealsDetailTVC: UITableViewController {
             vc.meal = mealTypeLbl.text
             navigationController?.pushViewController(vc, animated: true)
         }
-//        tabBarController?.selectedIndex = 2
+        //        tabBarController?.selectedIndex = 2
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: NSNotification.Name.init(rawValue: "mealAdded"), object: nil)
-    
         
         navigationController?.setNavigationBarHidden(false, animated: false)
         title = meal?.rawValue
@@ -31,7 +30,7 @@ class MealsDetailTVC: UITableViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         mealTypeLbl.text = meal?.rawValue
-       
+        
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
@@ -42,13 +41,13 @@ class MealsDetailTVC: UITableViewController {
     @objc func reloadTableView() {
         tableView.reloadData()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count + 1
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
@@ -58,16 +57,24 @@ class MealsDetailTVC: UITableViewController {
         cell.configure(by: meals[indexPath.row - 1])
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            CoreDataManger.shared.delete(meal: meals[indexPath.row])
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+                CoreDataManger.shared.delete(meal: meals[indexPath.row - 1])
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if indexPath.row >= 1 {
+            return .delete
+        } else {
+            return .none
         }
     }
 }

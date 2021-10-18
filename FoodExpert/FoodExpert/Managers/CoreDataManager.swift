@@ -12,9 +12,19 @@ class CoreDataManger {
     var currentNote: Note?
     var currentSelectedDate: Date?
     var currentUser: User?
-    var userName: String?
+    var caloriesSum: Int?
     
     var context: NSManagedObjectContext { persistentContainer.viewContext }
+    
+    func registration(with email: String, and name: String) {
+        let entityDescription = NSEntityDescription.entity(forEntityName: "User", in: context)!
+        let user = User(entity: entityDescription, insertInto: context)
+        
+        user.mail = email
+        user.name = name
+        
+        self.saveContext()
+    }
     
     func authorize(with mail: String) {
         do {
@@ -22,9 +32,6 @@ class CoreDataManger {
             let users: [User] = try context.fetch(request)
             if let user = users.filter( { $0.mail == mail }).first {
                 currentUser = user
-                userName = user.name
-            } else {
-                currentUser = createUser(with: mail)
             }
             updateNote(by: Date())
         } catch {
@@ -45,10 +52,10 @@ class CoreDataManger {
         return (currentNote?.meals?.allObjects as? [Meal])?.filter({ $0.mealType == mealType?.rawValue ?? "" })
     }
     
-    func addMeal(calories: Int, mealType: String?, carbs: Double, fats: Double, proteins: Double, foodName: String, measureType: String?) {//добавить все остальные парметры
+    func addMeal(calories: Int, mealType: String?, carbs: Double, fats: Double, proteins: Double, foodName: String, measureType: String?) {
         let entityDescription = NSEntityDescription.entity(forEntityName: "Meal", in: context)!
-        
         let meal = Meal(entity: entityDescription, insertInto: context)
+        
         meal.calories = Int16(calories)
         meal.mealType = mealType
         meal.carbs = carbs
@@ -63,10 +70,10 @@ class CoreDataManger {
     
     func createNote(date: Date) {
         let entityDescription = NSEntityDescription.entity(forEntityName: "Note", in: context)!
-        
         let note = Note(entity: entityDescription, insertInto: context)
         
         note.date = date
+        
         currentUser?.addToNotes(note)
         saveContext()
         currentNote = note
@@ -75,17 +82,6 @@ class CoreDataManger {
     func delete(meal: Meal) {
         context.delete(meal)
         saveContext()
-    }
-    
-    func createUser(with email: String) -> User {
-        let entityDescription = NSEntityDescription.entity(forEntityName: "User", in: context)!
-        
-        let user = User(entity: entityDescription, insertInto: context)
-        
-        user.mail = email
-        
-        self.saveContext()
-        return user
     }
     
     lazy var persistentContainer: NSPersistentContainer = {

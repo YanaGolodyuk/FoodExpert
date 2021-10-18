@@ -4,10 +4,11 @@ import CoreData
 class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var meals: [Meals] = Meals.allCases
-    
     var userName: String = ""
-    
     var notes = [Note]()
+    var mealsFromCurrentDate: [Meal] {
+        return CoreDataManger.shared.currentNote?.meals?.allObjects as? [Meal] ?? []
+    }
     
     @IBOutlet weak var mealPlanLabel: UILabel!
     
@@ -32,11 +33,11 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var mealsTableView: UITableView!
     
-    @IBAction func addButtonAction(_ sender: UIButton) {
-        if let vc = UIStoryboard(name: "AddFoodStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
-            navigationController?.pushViewController(vc, animated: true)
-        }
-    }
+//    @IBAction func addButtonAction(_ sender: UIButton) {
+//        if let vc = UIStoryboard(name: "AddFoodStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
+//            navigationController?.pushViewController(vc, animated: true)
+//        }
+//    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         mealsTableView.delegate = self
         mealsTableView.dataSource = self
         navigationController?.navigationBar.isHidden = true
+        configure()
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateNote), name: NSNotification.Name.init(rawValue: "dateChanged"), object: nil)
     }
@@ -55,11 +57,21 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @objc func updateNote() {
         let date = CoreDataManger.shared.currentSelectedDate ?? Date()
         dateSetBtn.setTitle(date.toString(), for: .normal)
+        configure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        configure()
+    }
+    
+    func configure() {
+        intakeKcalLabel.text = "\(Int(mealsFromCurrentDate.caloriesSum))"
+        proteinsIntakeLabel.text = "\(Int(mealsFromCurrentDate.proteinsSum))"
+        carbsIntakeLabel.text = "\(Int(mealsFromCurrentDate.carbsSum))"
+        fatsIntakeLabel.text = "\(Int(mealsFromCurrentDate.fatsSum))"
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +92,6 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
 }
 
 @IBDesignable extension UIView {
@@ -94,5 +105,20 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             guard let color = layer.borderColor else { return nil }
             return UIColor(cgColor: color)
         }
+    }
+}
+
+extension Array where Element: Meal {
+    var caloriesSum: Int {
+        return self.map({ Int($0.calories) }).reduce(0, +)
+    }
+    var proteinsSum: Double {
+        return self.map({ $0.proteins }).reduce(0, +)
+    }
+    var carbsSum: Double {
+        return self.map({ $0.carbs }).reduce(0, +)
+    }
+    var fatsSum: Double {
+        return self.map({ $0.fats }).reduce(0, +)
     }
 }

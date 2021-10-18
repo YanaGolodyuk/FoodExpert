@@ -33,7 +33,6 @@
 		84C5471B27020D53000CE65D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5471A27020D53000CE65D /* MainVC.swift */; };
 		84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */; };
 		84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C547282705465F000CE65D /* GoogleService-Info.plist */; };
-		84C5472B2705E335000CE65D /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5472A2705E334000CE65D /* CircleProgressView.swift */; };
 		84C5473227062E51000CE65D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5473127062E51000CE65D /* MealTableViewCell.swift */; };
 		84C5473527063C4E000CE65D /* MealsDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */; };
 		84C5473727063CF8000CE65D /* MealsDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5473627063CF8000CE65D /* MealsDetailTVC.swift */; };
@@ -74,7 +73,6 @@
 		84C5471A27020D53000CE65D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		84C547282705465F000CE65D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		84C5472A2705E334000CE65D /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		84C5473127062E51000CE65D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealsDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		84C5473627063CF8000CE65D /* MealsDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsDetailTVC.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */,
 				849E8E04270DC8CD00A8BB58 /* Cells */,
 				843342D5271233D10005BBDC /* CalendarVC.swift */,
-				84C5472A2705E334000CE65D /* CircleProgressView.swift */,
 			);
 			path = FoodDiaryVC;
 			sourceTree = "<group>";
@@ -505,7 +502,6 @@
 				849E8E0A270E3E9500A8BB58 /* FoodSearchDetailVC.swift in Sources */,
 				8413F10826EA753C003EEC04 /* FoodDiaryVC.swift in Sources */,
 				84F0E0FA26E59CC8002E9FA2 /* AppDelegate.swift in Sources */,
-				84C5472B2705E335000CE65D /* CircleProgressView.swift in Sources */,
 				8413F0FF26E93D74003EEC04 /* CreateAccountVC.swift in Sources */,
 				FA47F5A6270CDA2000EED2E7 /* ReciepeImageCell.swift in Sources */,
 				8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */,

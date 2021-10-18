@@ -13,37 +13,31 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var passTF: UITextField!
     //    @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         ref = Database.database().reference(withPath: "users")
-        
         Auth.auth().addStateDidChangeListener { [weak self] _, user in
             guard let _ = user else { return }
         }
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func SignUpBtnTapped(_ sender: Any) {
         guard let name = nameTF.text, name != "",
               let email = emailTF.text, email != "",
               let password = passTF.text, password != ""  else { return }
-        
-        userName = name
-        didTapSignUpButton(email, password)
+        didTapSignUpButton(email, password, name)
     }
     
-    func didTapSignUpButton(_ email: String, _ password: String) {
+    func didTapSignUpButton(_ email: String, _ password: String, _ name: String) {
         FirebaseAuthManager().createUser(email: email, password: password) { [weak self] success, errorString  in
             guard let self = self else { return }
             switch success {
             case true :
-                CoreDataManger.shared.authorize(with: email)
-                
-                if let foodDiaryVC = UIStoryboard(name: "DiaryMainStoryboard", bundle: .main).instantiateInitialViewController() {
-                    self.navigationController?.show(foodDiaryVC, sender: nil)
-                    self.dismiss(animated: true, completion: nil)
-                }
+                CoreDataManger.shared.registration(with: email, and: name)
+                self.dismiss(animated: true, completion: nil)
             case false:
                 let alertController = UIAlertController(title: nil, message: "Registration was incorrect\n\(errorString ?? "")", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
