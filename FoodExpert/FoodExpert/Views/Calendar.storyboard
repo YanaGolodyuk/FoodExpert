@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CalendarVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CalendarVC" id="Y6W-OH-hqX" customClass="CalendarVC" customModule="FoodExpert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BJ-5u-obG">
+                                <rect key="frame" x="0.0" y="288" width="414" height="330"/>
+                                <subviews>
+                                    <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="VB5-lB-ZgZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+                                        <color key="backgroundColor" red="0.83781636900000001" green="0.25697353989999999" blue="0.1328875102" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.83781636900000001" green="0.25697353989999999" blue="0.1328875102" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.390179952" green="0.390179952" blue="0.390179952" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="datePickerValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="eee-zW-Vhy"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" red="0.173813791" green="0.173813791" blue="0.173813791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.173813791" green="0.173813791" blue="0.173813791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="RQz-Jb-5kG"/>
+                                    <constraint firstAttribute="trailing" secondItem="VB5-lB-ZgZ" secondAttribute="trailing" id="Xzw-aF-Uvb"/>
+                                    <constraint firstItem="VB5-lB-ZgZ" firstAttribute="leading" secondItem="6BJ-5u-obG" secondAttribute="leading" id="cpp-uv-2an"/>
+                                    <constraint firstItem="VB5-lB-ZgZ" firstAttribute="top" secondItem="6BJ-5u-obG" secondAttribute="top" id="dyD-BX-khK"/>
+                                    <constraint firstAttribute="bottom" secondItem="VB5-lB-ZgZ" secondAttribute="bottom" id="fIi-Nr-dN4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6BJ-5u-obG" secondAttribute="trailing" id="8u1-zo-Qtm"/>
+                            <constraint firstItem="6BJ-5u-obG" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="EYG-Kw-QjQ"/>
+                            <constraint firstItem="6BJ-5u-obG" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Oqa-Sc-vfh"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="330"/>
+                    <connections>
+                        <outlet property="datePicker" destination="VB5-lB-ZgZ" id="mfc-aX-xQx"/>
+                        <outlet property="superView" destination="5EZ-qb-Rvc" id="iQC-7x-PUV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+</document>

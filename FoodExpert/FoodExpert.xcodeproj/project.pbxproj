@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15FED59F31BAD4BB2D43A8D5 /* Pods_FoodExpert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4914C2569606941FB042E219 /* Pods_FoodExpert.framework */; };
+		8413F0FF26E93D74003EEC04 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F0FE26E93D74003EEC04 /* CreateAccountVC.swift */; };
+		8413F10826EA753C003EEC04 /* FoodDiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */; };
+		8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */; };
+		8413F10C26EA760C003EEC04 /* AddFoodTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */; };
+		8413F11026EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F10F26EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift */; };
+		8413F11426EA883C003EEC04 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11326EA883C003EEC04 /* Meals.swift */; };
+		8413F11626EA8A17003EEC04 /* Diets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F11526EA8A17003EEC04 /* Diets.swift */; };
+		843342CF2711FF570005BBDC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843342CE2711FF560005BBDC /* CoreDataManager.swift */; };
+		843342D42712338E0005BBDC /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843342D32712338E0005BBDC /* Calendar.storyboard */; };
+		843342D6271233D10005BBDC /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843342D5271233D10005BBDC /* CalendarVC.swift */; };
+		843342D8271333B40005BBDC /* AccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843342D7271333B40005BBDC /* AccountStoryboard.storyboard */; };
+		843342DA271335740005BBDC /* AddFoodStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843342D9271335740005BBDC /* AddFoodStoryboard.storyboard */; };
+		843342DC2713367D0005BBDC /* RecipesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843342DB2713367D0005BBDC /* RecipesStoryboard.storyboard */; };
+		844BE63A26E8791B00C1E5A3 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */; };
+		84907172270C8A59001E9280 /* FoodTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907171270C8A59001E9280 /* FoodTVCell.swift */; };
+		849E8E00270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */; };
+		849E8E03270DC89500A8BB58 /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E02270DC89500A8BB58 /* RecipeDetailVC.swift */; };
+		849E8E08270E3E4200A8BB58 /* FoodSearchDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */; };
+		849E8E0A270E3E9500A8BB58 /* FoodSearchDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E09270E3E9500A8BB58 /* FoodSearchDetailVC.swift */; };
+		849E8E10270E4F0B00A8BB58 /* AddFoodTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E8E0F270E4F0B00A8BB58 /* AddFoodTVCell.swift */; };
+		84A5D280271345E80058138B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10526E59CCF002E9FA2 /* Assets.xcassets */; };
+		84B82DF2270CB78500BAB5CF /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B82DF1270CB78500BAB5CF /* ServerManager.swift */; };
+		84C5471B27020D53000CE65D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5471A27020D53000CE65D /* MainVC.swift */; };
+		84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */; };
+		84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C547282705465F000CE65D /* GoogleService-Info.plist */; };
+		84C5473227062E51000CE65D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5473127062E51000CE65D /* MealTableViewCell.swift */; };
+		84C5473527063C4E000CE65D /* MealsDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */; };
+		84C5473727063CF8000CE65D /* MealsDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5473627063CF8000CE65D /* MealsDetailTVC.swift */; };
+		84F0E0FA26E59CC8002E9FA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E0F926E59CC8002E9FA2 /* AppDelegate.swift */; };
+		84F0E0FC26E59CC8002E9FA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E0FB26E59CC8002E9FA2 /* SceneDelegate.swift */; };
+		84F0E10126E59CC8002E9FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E0FF26E59CC8002E9FA2 /* Main.storyboard */; };
+		84F0E10426E59CC8002E9FA2 /* FoodExpert.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */; };
+		84F0E10926E59CCF002E9FA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E10726E59CCF002E9FA2 /* LaunchScreen.storyboard */; };
+		84F0E12226E873FE002E9FA2 /* DiaryMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */; };
+		FA47F5A4270CD32400EED2E7 /* SearchBarCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47F5A3270CD32400EED2E7 /* SearchBarCollectionReusableView.swift */; };
+		FA47F5A6270CDA2000EED2E7 /* ReciepeImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47F5A5270CDA2000EED2E7 /* ReciepeImageCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BCB6725A3B3764AE81BA7F2 /* Pods-FoodExpert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodExpert.debug.xcconfig"; path = "Target Support Files/Pods-FoodExpert/Pods-FoodExpert.debug.xcconfig"; sourceTree = "<group>"; };
+		4914C2569606941FB042E219 /* Pods_FoodExpert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodExpert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8413F0FE26E93D74003EEC04 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryVC.swift; sourceTree = "<group>"; };
+		8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCollectionVC.swift; sourceTree = "<group>"; };
+		8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodTVC.swift; sourceTree = "<group>"; };
+		8413F10F26EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccInfoAndSettingsVC.swift; sourceTree = "<group>"; };
+		8413F11326EA883C003EEC04 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		8413F11526EA8A17003EEC04 /* Diets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diets.swift; sourceTree = "<group>"; };
+		843342CE2711FF560005BBDC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		843342D32712338E0005BBDC /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		843342D5271233D10005BBDC /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		843342D7271333B40005BBDC /* AccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountStoryboard.storyboard; sourceTree = "<group>"; };
+		843342D9271335740005BBDC /* AddFoodStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFoodStoryboard.storyboard; sourceTree = "<group>"; };
+		843342DB2713367D0005BBDC /* RecipesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipesStoryboard.storyboard; sourceTree = "<group>"; };
+		844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		84907171270C8A59001E9280 /* FoodTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTVCell.swift; sourceTree = "<group>"; };
+		849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		849E8E02270DC89500A8BB58 /* RecipeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
+		849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodSearchDetail.storyboard; sourceTree = "<group>"; };
+		849E8E09270E3E9500A8BB58 /* FoodSearchDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchDetailVC.swift; sourceTree = "<group>"; };
+		849E8E0F270E4F0B00A8BB58 /* AddFoodTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodTVCell.swift; sourceTree = "<group>"; };
+		84B82DF1270CB78500BAB5CF /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		84C5471A27020D53000CE65D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		84C547282705465F000CE65D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84C5473127062E51000CE65D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealsDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		84C5473627063CF8000CE65D /* MealsDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsDetailTVC.swift; sourceTree = "<group>"; };
+		84D51B10270D0D140040B03D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D51B14270D0D260040B03D /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F0E0F626E59CC8002E9FA2 /* FoodExpert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExpert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F0E0F926E59CC8002E9FA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84F0E0FB26E59CC8002E9FA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84F0E10026E59CC8002E9FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84F0E10326E59CC8002E9FA2 /* FoodExpert.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodExpert.xcdatamodel; sourceTree = "<group>"; };
+		84F0E10526E59CCF002E9FA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84F0E10826E59CCF002E9FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84F0E10A26E59CCF002E9FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryMainStoryboard.storyboard; sourceTree = "<group>"; };
+		A39970A512C6A7E5E199366E /* Pods-FoodExpert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodExpert.release.xcconfig"; path = "Target Support Files/Pods-FoodExpert/Pods-FoodExpert.release.xcconfig"; sourceTree = "<group>"; };
+		FA47F5A3270CD32400EED2E7 /* SearchBarCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCollectionReusableView.swift; sourceTree = "<group>"; };
+		FA47F5A5270CDA2000EED2E7 /* ReciepeImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciepeImageCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F0E0F326E59CC8002E9FA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FED59F31BAD4BB2D43A8D5 /* Pods_FoodExpert.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8413F10426EA7493003EEC04 /* DiaryControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84907173270C8B22001E9280 /* MealsDetailTVC */,
+				84907174270C8B43001E9280 /* FoodDiaryVC */,
+			);
+			path = DiaryControllers;
+			sourceTree = "<group>";
+		};
+		8413F10526EA74F5003EEC04 /* RecepesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				849E8E06270DC90800A8BB58 /* RecipesMain */,
+				849E8E01270DC85800A8BB58 /* RecipeDetailVC */,
+			);
+			path = RecepesControllers;
+			sourceTree = "<group>";
+		};
+		8413F10626EA7506003EEC04 /* AddFoodControllers */ = {
+			isa = PBXGroup;
+			children = (
+				849E8E0C270E4B8800A8BB58 /* MainAddFoodController */,
+				849E8E09270E3E9500A8BB58 /* FoodSearchDetailVC.swift */,
+			);
+			path = AddFoodControllers;
+			sourceTree = "<group>";
+		};
+		8413F10D26EA77B9003EEC04 /* AccountControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10F26EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift */,
+			);
+			path = AccountControllers;
+			sourceTree = "<group>";
+		};
+		84907173270C8B22001E9280 /* MealsDetailTVC */ = {
+			isa = PBXGroup;
+			children = (
+				84C5473627063CF8000CE65D /* MealsDetailTVC.swift */,
+				849E8E05270DC8DF00A8BB58 /* Cells */,
+			);
+			path = MealsDetailTVC;
+			sourceTree = "<group>";
+		};
+		84907174270C8B43001E9280 /* FoodDiaryVC */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10726EA753C003EEC04 /* FoodDiaryVC.swift */,
+				849E8E04270DC8CD00A8BB58 /* Cells */,
+				843342D5271233D10005BBDC /* CalendarVC.swift */,
+			);
+			path = FoodDiaryVC;
+			sourceTree = "<group>";
+		};
+		849E8E01270DC85800A8BB58 /* RecipeDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				849E8E02270DC89500A8BB58 /* RecipeDetailVC.swift */,
+			);
+			path = RecipeDetailVC;
+			sourceTree = "<group>";
+		};
+		849E8E04270DC8CD00A8BB58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84C5473127062E51000CE65D /* MealTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		849E8E05270DC8DF00A8BB58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84907171270C8A59001E9280 /* FoodTVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		849E8E06270DC90800A8BB58 /* RecipesMain */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10926EA75A6003EEC04 /* RecipesCollectionVC.swift */,
+				FA47F5A2270CD30100EED2E7 /* Cells */,
+			);
+			path = RecipesMain;
+			sourceTree = "<group>";
+		};
+		849E8E0B270E4B6B00A8BB58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				849E8E0F270E4F0B00A8BB58 /* AddFoodTVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		849E8E0C270E4B8800A8BB58 /* MainAddFoodController */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10B26EA760C003EEC04 /* AddFoodTVC.swift */,
+				849E8E0B270E4B6B00A8BB58 /* Cells */,
+			);
+			path = MainAddFoodController;
+			sourceTree = "<group>";
+		};
+		84C5471927020D22000CE65D /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				84C5471A27020D53000CE65D /* MainVC.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		84C547252704DA2F000CE65D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				84C547262704DA5A000CE65D /* FirebaseAuthManager.swift */,
+				843342CE2711FF560005BBDC /* CoreDataManager.swift */,
+				84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		84F0E0ED26E59CC7002E9FA2 = {
+			isa = PBXGroup;
+			children = (
+				84F0E0F826E59CC8002E9FA2 /* FoodExpert */,
+				84F0E0F726E59CC8002E9FA2 /* Products */,
+				D6E029DD6C8515D3CB4B3162 /* Pods */,
+				F9FD3C0A45FB72E556F97D00 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84F0E0F726E59CC8002E9FA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F0E0F626E59CC8002E9FA2 /* FoodExpert.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F0E0F826E59CC8002E9FA2 /* FoodExpert */ = {
+			isa = PBXGroup;
+			children = (
+				84C547252704DA2F000CE65D /* Managers */,
+				84F0E11526E59D3D002E9FA2 /* Services */,
+				84F0E11426E59D2E002E9FA2 /* Models */,
+				84F0E11026E59CEB002E9FA2 /* Views */,
+				84F0E11226E59D12002E9FA2 /* Controllers */,
+				84F0E11126E59D05002E9FA2 /* AppDelegate */,
+				84F0E11326E59D23002E9FA2 /* Sources */,
+				84C547282705465F000CE65D /* GoogleService-Info.plist */,
+				84F0E10A26E59CCF002E9FA2 /* Info.plist */,
+			);
+			path = FoodExpert;
+			sourceTree = "<group>";
+		};
+		84F0E11026E59CEB002E9FA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				843342D7271333B40005BBDC /* AccountStoryboard.storyboard */,
+				849E8E07270E3E4100A8BB58 /* FoodSearchDetail.storyboard */,
+				843342D9271335740005BBDC /* AddFoodStoryboard.storyboard */,
+				849E8DFF270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard */,
+				843342DB2713367D0005BBDC /* RecipesStoryboard.storyboard */,
+				843342D32712338E0005BBDC /* Calendar.storyboard */,
+				84C5473427063C4D000CE65D /* MealsDetailStoryboard.storyboard */,
+				84F0E12126E873FE002E9FA2 /* DiaryMainStoryboard.storyboard */,
+				844BE63926E8791B00C1E5A3 /* SignUpStoryboard.storyboard */,
+				84F0E0FF26E59CC8002E9FA2 /* Main.storyboard */,
+				84F0E10726E59CCF002E9FA2 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84F0E11126E59D05002E9FA2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84F0E0F926E59CC8002E9FA2 /* AppDelegate.swift */,
+				84F0E0FB26E59CC8002E9FA2 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		84F0E11226E59D12002E9FA2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F10D26EA77B9003EEC04 /* AccountControllers */,
+				8413F10626EA7506003EEC04 /* AddFoodControllers */,
+				8413F10526EA74F5003EEC04 /* RecepesControllers */,
+				8413F10426EA7493003EEC04 /* DiaryControllers */,
+				84F0E11C26E86027002E9FA2 /* SignUpControllers */,
+				84C5471927020D22000CE65D /* MainVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84F0E11326E59D23002E9FA2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				84F0E10526E59CCF002E9FA2 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		84F0E11426E59D2E002E9FA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8413F11326EA883C003EEC04 /* Meals.swift */,
+				8413F11526EA8A17003EEC04 /* Diets.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84F0E11526E59D3D002E9FA2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84F0E11626E59D5F002E9FA2 /* APIService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84F0E11626E59D5F002E9FA2 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				84B82DF1270CB78500BAB5CF /* ServerManager.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		84F0E11C26E86027002E9FA2 /* SignUpControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8413F0FE26E93D74003EEC04 /* CreateAccountVC.swift */,
+			);
+			path = SignUpControllers;
+			sourceTree = "<group>";
+		};
+		D6E029DD6C8515D3CB4B3162 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BCB6725A3B3764AE81BA7F2 /* Pods-FoodExpert.debug.xcconfig */,
+				A39970A512C6A7E5E199366E /* Pods-FoodExpert.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F9FD3C0A45FB72E556F97D00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84D51B14270D0D260040B03D /* FBLPromises.framework */,
+				84D51B10270D0D140040B03D /* Alamofire.framework */,
+				4914C2569606941FB042E219 /* Pods_FoodExpert.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA47F5A2270CD30100EED2E7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA47F5A3270CD32400EED2E7 /* SearchBarCollectionReusableView.swift */,
+				FA47F5A5270CDA2000EED2E7 /* ReciepeImageCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F0E0F526E59CC8002E9FA2 /* FoodExpert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F0E10D26E59CCF002E9FA2 /* Build configuration list for PBXNativeTarget "FoodExpert" */;
+			buildPhases = (
+				D188B65EBF653C8DCFC17D93 /* [CP] Check Pods Manifest.lock */,
+				84F0E0F226E59CC8002E9FA2 /* Sources */,
+				84F0E0F326E59CC8002E9FA2 /* Frameworks */,
+				84F0E0F426E59CC8002E9FA2 /* Resources */,
+				B7C001A5F15520589205355C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoodExpert;
+			productName = FoodExpert;
+			productReference = 84F0E0F626E59CC8002E9FA2 /* FoodExpert.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F0E0EE26E59CC7002E9FA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					84F0E0F526E59CC8002E9FA2 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 84F0E0F126E59CC7002E9FA2 /* Build configuration list for PBXProject "FoodExpert" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84F0E0ED26E59CC7002E9FA2;
+			productRefGroup = 84F0E0F726E59CC8002E9FA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F0E0F526E59CC8002E9FA2 /* FoodExpert */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F0E0F426E59CC8002E9FA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849E8E08270E3E4200A8BB58 /* FoodSearchDetail.storyboard in Resources */,
+				843342DA271335740005BBDC /* AddFoodStoryboard.storyboard in Resources */,
+				843342DC2713367D0005BBDC /* RecipesStoryboard.storyboard in Resources */,
+				844BE63A26E8791B00C1E5A3 /* SignUpStoryboard.storyboard in Resources */,
+				84C5473527063C4E000CE65D /* MealsDetailStoryboard.storyboard in Resources */,
+				84F0E10926E59CCF002E9FA2 /* LaunchScreen.storyboard in Resources */,
+				84A5D280271345E80058138B /* Assets.xcassets in Resources */,
+				843342D8271333B40005BBDC /* AccountStoryboard.storyboard in Resources */,
+				84C547292705465F000CE65D /* GoogleService-Info.plist in Resources */,
+				849E8E00270DC67A00A8BB58 /* RecipeDetailStoryboard.storyboard in Resources */,
+				84F0E10126E59CC8002E9FA2 /* Main.storyboard in Resources */,
+				843342D42712338E0005BBDC /* Calendar.storyboard in Resources */,
+				84F0E12226E873FE002E9FA2 /* DiaryMainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7C001A5F15520589205355C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodExpert/Pods-FoodExpert-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodExpert/Pods-FoodExpert-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodExpert/Pods-FoodExpert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D188B65EBF653C8DCFC17D93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodExpert-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F0E0F226E59CC8002E9FA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B82DF2270CB78500BAB5CF /* ServerManager.swift in Sources */,
+				84C5471B27020D53000CE65D /* MainVC.swift in Sources */,
+				849E8E03270DC89500A8BB58 /* RecipeDetailVC.swift in Sources */,
+				84C5473727063CF8000CE65D /* MealsDetailTVC.swift in Sources */,
+				84C547272704DA5B000CE65D /* FirebaseAuthManager.swift in Sources */,
+				843342D6271233D10005BBDC /* CalendarVC.swift in Sources */,
+				849E8E0A270E3E9500A8BB58 /* FoodSearchDetailVC.swift in Sources */,
+				8413F10826EA753C003EEC04 /* FoodDiaryVC.swift in Sources */,
+				84F0E0FA26E59CC8002E9FA2 /* AppDelegate.swift in Sources */,
+				8413F0FF26E93D74003EEC04 /* CreateAccountVC.swift in Sources */,
+				FA47F5A6270CDA2000EED2E7 /* ReciepeImageCell.swift in Sources */,
+				8413F10A26EA75A6003EEC04 /* RecipesCollectionVC.swift in Sources */,
+				84F0E0FC26E59CC8002E9FA2 /* SceneDelegate.swift in Sources */,
+				FA47F5A4270CD32400EED2E7 /* SearchBarCollectionReusableView.swift in Sources */,
+				84C5473227062E51000CE65D /* MealTableViewCell.swift in Sources */,
+				8413F11626EA8A17003EEC04 /* Diets.swift in Sources */,
+				849E8E10270E4F0B00A8BB58 /* AddFoodTVCell.swift in Sources */,
+				843342CF2711FF570005BBDC /* CoreDataManager.swift in Sources */,
+				8413F10C26EA760C003EEC04 /* AddFoodTVC.swift in Sources */,
+				84907172270C8A59001E9280 /* FoodTVCell.swift in Sources */,
+				8413F11026EA7AAE003EEC04 /* AccInfoAndSettingsVC.swift in Sources */,
+				84F0E10426E59CC8002E9FA2 /* FoodExpert.xcdatamodeld in Sources */,
+				8413F11426EA883C003EEC04 /* Meals.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84F0E0FF26E59CC8002E9FA2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F0E10026E59CC8002E9FA2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84F0E10726E59CCF002E9FA2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F0E10826E59CCF002E9FA2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84F0E10B26E59CCF002E9FA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84F0E10C26E59CCF002E9FA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F0E10E26E59CCF002E9FA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BCB6725A3B3764AE81BA7F2 /* Pods-FoodExpert.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28KY97ZH9V;
+				INFOPLIST_FILE = FoodExpert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.golodyuk.goodexpert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F0E10F26E59CCF002E9FA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A39970A512C6A7E5E199366E /* Pods-FoodExpert.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28KY97ZH9V;
+				INFOPLIST_FILE = FoodExpert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.golodyuk.goodexpert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F0E0F126E59CC7002E9FA2 /* Build configuration list for PBXProject "FoodExpert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F0E10B26E59CCF002E9FA2 /* Debug */,
+				84F0E10C26E59CCF002E9FA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F0E10D26E59CCF002E9FA2 /* Build configuration list for PBXNativeTarget "FoodExpert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F0E10E26E59CCF002E9FA2 /* Debug */,
+				84F0E10F26E59CCF002E9FA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84F0E10226E59CC8002E9FA2 /* FoodExpert.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84F0E10326E59CC8002E9FA2 /* FoodExpert.xcdatamodel */,
+			);
+			currentVersion = 84F0E10326E59CC8002E9FA2 /* FoodExpert.xcdatamodel */;
+			name = FoodExpert.xcdatamodeld;
+			path = ../FoodExpert.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84F0E0EE26E59CC7002E9FA2 /* Project object */;
+}
