@@ -13,6 +13,7 @@ class AddFoodTVC: UITableViewController {
         title = "Search food"
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationController?.setNavigationBarHidden(false, animated: false)
         getFood(ingr: "a")
         getFood()
         self.hideKeyboardWhenTappedAround()

@@ -32,19 +32,15 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var showNextDayBtn: UIButton!
     
     @IBOutlet weak var mealsTableView: UITableView!
-    
-//    @IBAction func addButtonAction(_ sender: UIButton) {
-//        if let vc = UIStoryboard(name: "AddFoodStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
-//    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
         dateSetBtn.setTitle(Date().toString(), for: .normal)
         mealsTableView.delegate = self
         mealsTableView.dataSource = self
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = false
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         configure()
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateNote), name: NSNotification.Name.init(rawValue: "dateChanged"), object: nil)
@@ -62,7 +58,7 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         configure()
     }
     
@@ -83,12 +79,23 @@ class FoodDiaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
         let meal = meals[indexPath.row]
         cell.mealLabel.text = meal.rawValue
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "MealsDetailStoryboard", bundle: nil).instantiateInitialViewController() as? MealsDetailTVC {
             vc.meal = meals[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+extension FoodDiaryVC: MealTableViewCellDelegate {
+    
+    func didTapAddMealButton(with title: String) {
+        if let vc = UIStoryboard(name: "AddFoodStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddFoodTVC") as? AddFoodTVC {
+            vc.meal = title
             navigationController?.pushViewController(vc, animated: true)
         }
     }
